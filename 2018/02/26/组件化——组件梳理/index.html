@@ -43,7 +43,7 @@
     
     <title>
         
-            标签: vue | 
+            组件化——组件梳理 | 
         
         RationalPoet Blog --Mac
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",component,research">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -210,7 +210,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="RationalPoet Blog --Mac">
-    <meta name="msapplication-starturl" content="http://yoursite.com/tags/vue/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/02/26/组件化——组件梳理/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="RationalPoet Blog --Mac">
@@ -225,13 +225,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/tags/vue/">
+    <meta property="og:url" content="http://yoursite.com/2018/02/26/组件化——组件梳理/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: vue | RationalPoet Blog --Mac">
+    <meta property="og:title" content="组件化——组件梳理 | RationalPoet Blog --Mac">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="component"> <meta property="og:article:tag" content="research"> 
 
+    
+        <meta property="article:published_time" content="Mon Feb 26 2018 09:13:12 GMT+0800">
+        <meta property="article:modified_time" content="Mon Feb 26 2018 12:33:24 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -239,13 +242,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/tags/vue/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/02/26/组件化——组件梳理/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/02/26/组件化——组件梳理/index.html",
+    "headline": "组件化——组件梳理",
+    "datePublished": "Mon Feb 26 2018 09:13:12 GMT+0800",
+    "dateModified": "Mon Feb 26 2018 12:33:24 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "YoungSure",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/plogo.jpg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "RationalPoet Blog --Mac",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",component,research",
+    "description": "",
+}
+</script>
 
 
     
@@ -279,91 +312,230 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
+                    <!-- Post TOC -->
+
     
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
-    
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/random/material-1.png">
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/02/23/first-blog/">first blog</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/02/23/first-blog/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/plogo.jpg" width="44px" height="44px" alt="YoungSure's avatar">
-            </div>
-            <div>
-                <strong>YoungSure</strong>
-                <span>2月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
             </span>
-        </div>
+        </a>
     </div>
-</div>
+    -->
 
-            
-            
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#组件分类"><span class="post-toc-number">1.</span> <span class="post-toc-text">组件分类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基础组件"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">基础组件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#复合组件"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">复合组件</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
         
-    
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                组件化——组件梳理
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/plogo.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>YoungSure</strong>
+        <span>2月 26, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/component/">component</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/research/">research</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=组件化——组件梳理&url=http://yoursite.com/2018/02/26/组件化——组件梳理/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2018/02/26/组件化——组件梳理/index.html&title=组件化——组件梳理" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>做前端组件化管理、开发是CTW前端技术发展的必然趋势。促成此次组件化计划的内因有很多，如前端开发流程中的诟病（信息不对称造成的重复造轮子、需求不统一规范造成的代码高度耦合、代码编写不谨慎造成的环境污染等）、部门协作的不透明（产品不知道我们有哪些公共设施，造成很多长得很像却又不是同一个东西的“公共”模块，诸如此类）。所以，组件化的开发和管理对畅途网无论是技术的升级还是易于开发管理都有着深远的重要意义。</p>
+<hr>
+<p>千里之行，始于足下。我们要做组件化，就一定要确定要做哪些组件，本文就CTW已有页面的已有业务和展示部分做了梳理，整理出我们此次组件化过程中要做成组件的那些部分。</p>
+<h2 id="组件分类"><a href="#组件分类" class="headerlink" title="组件分类"></a>组件分类</h2><h3 id="基础组件"><a href="#基础组件" class="headerlink" title="基础组件"></a>基础组件</h3><p>颗粒度最小的组件，只做基础功能处理，可被复合使用</p>
+<ol>
+<li>输入框</li>
+<li>按钮</li>
+<li>下拉列表</li>
+<li>单选框</li>
+<li>多选框</li>
+<li>提示弹框</li>
+<li>日期弹框</li>
+<li>城市弹框</li>
+<li>酒店关键词弹框</li>
+<li>景点关键词弹框</li>
+<li>卡片</li>
+<li>走马灯</li>
+<li>弹出框<h3 id="复合组件"><a href="#复合组件" class="headerlink" title="复合组件"></a>复合组件</h3>复合基础组件而成的组件，主要表现为处理整段业务的功能模块</li>
+<li>登录弹框</li>
+<li>设置支付密码弹框</li>
+<li>修改新增手机号弹框</li>
+<li>编辑常用旅客弹框</li>
+<li>日期滚动条</li>
+</ol>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/02/22/hello-world/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -548,6 +720,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
