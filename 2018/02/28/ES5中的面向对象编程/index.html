@@ -43,7 +43,7 @@
     
     <title>
         
-            归档: 2018 | 
+            ES5中的面向对象编程 | 
         
         RationalPoet Blog --Mac
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",javascript,ES5">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -210,7 +210,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="RationalPoet Blog --Mac">
-    <meta name="msapplication-starturl" content="http://yoursite.com/archives/2018/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/02/28/ES5中的面向对象编程/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="RationalPoet Blog --Mac">
@@ -225,13 +225,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/archives/2018/">
+    <meta property="og:url" content="http://yoursite.com/2018/02/28/ES5中的面向对象编程/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2018 | RationalPoet Blog --Mac">
+    <meta property="og:title" content="ES5中的面向对象编程 | RationalPoet Blog --Mac">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="ES5"> 
 
+    
+        <meta property="article:published_time" content="Wed Feb 28 2018 09:08:51 GMT+0800">
+        <meta property="article:modified_time" content="Wed Feb 28 2018 09:47:20 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -239,13 +242,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2018/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/02/28/ES5中的面向对象编程/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/02/28/ES5中的面向对象编程/index.html",
+    "headline": "ES5中的面向对象编程",
+    "datePublished": "Wed Feb 28 2018 09:08:51 GMT+0800",
+    "dateModified": "Wed Feb 28 2018 09:47:20 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "YoungSure",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/plogo.jpg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "RationalPoet Blog --Mac",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",javascript,ES5",
+    "description": "",
+}
+</script>
 
 
     
@@ -279,149 +312,211 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#工厂模式"><span class="post-toc-number">1.</span> <span class="post-toc-text">工厂模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#构造函数"><span class="post-toc-number">2.</span> <span class="post-toc-text">构造函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原型对象"><span class="post-toc-number">3.</span> <span class="post-toc-text">原型对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组合使用构造函数和原型模式"><span class="post-toc-number">4.</span> <span class="post-toc-text">组合使用构造函数和原型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#动态原型模式"><span class="post-toc-number">5.</span> <span class="post-toc-text">动态原型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#寄生模型"><span class="post-toc-number">6.</span> <span class="post-toc-text">寄生模型</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/02/28/ES5中的面向对象编程/">ES5中的面向对象编程</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            工厂模式
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/02/28/ES5中的面向对象编程/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/plogo.jpg" width="44px" height="44px" alt="YoungSure's avatar">
-            </div>
-            <div>
-                <strong>YoungSure</strong>
-                <span>2月 28, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/02/26/组件化——组件梳理/">组件化——组件梳理</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            做前端组件化管理、开发是CTW前端技术发展的必然趋势。促成此次组件化计划的内因有很多，如前端开发流程中的诟病（信息不对称造成的重复造轮子、需求不统一...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/02/26/组件化——组件梳理/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/plogo.jpg" width="44px" height="44px" alt="YoungSure's avatar">
-            </div>
-            <div>
-                <strong>YoungSure</strong>
-                <span>2月 26, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                ES5中的面向对象编程
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/plogo.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>YoungSure</strong>
+        <span>2月 28, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/ES5/">ES5</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/javascript/">javascript</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ES5中的面向对象编程&url=http://yoursite.com/2018/02/28/ES5中的面向对象编程/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2018/02/28/ES5中的面向对象编程/index.html&title=ES5中的面向对象编程" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 工厂模式创建对象，缺点：无法判别实例类型</span><br><span class="line"> * @param  &#123;[type]&#125; name     [description]</span><br><span class="line"> * @param  &#123;[type]&#125; age      [description]</span><br><span class="line"> * @param  &#123;[type]&#125; sex      [description]</span><br><span class="line"> * @param  &#123;[type]&#125; sayHello [description]</span><br><span class="line"> * @return &#123;[type]&#125;          [description]</span><br><span class="line"> */</span><br><span class="line">function people(name, age, sex)&#123;</span><br><span class="line">	var person = new Object();</span><br><span class="line">	person.name = name;</span><br><span class="line">	person.age = age;</span><br><span class="line">	person.sex = sex;</span><br><span class="line">	person.sayName = function()&#123;</span><br><span class="line">		alert(person.name);</span><br><span class="line">	&#125;;</span><br><span class="line">	return person;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 构造函数创建对象，缺点：重复创建共享方法</span><br><span class="line"> * @param &#123;[type]&#125; name     [description]</span><br><span class="line"> * @param &#123;[type]&#125; age      [description]</span><br><span class="line"> * @param &#123;[type]&#125; sex      [description]</span><br><span class="line"> * @param &#123;[type]&#125; sayHello [description]</span><br><span class="line"> */</span><br><span class="line">function People(name, age, sex)&#123;</span><br><span class="line">	this.name = name;</span><br><span class="line">	this.age = age;</span><br><span class="line">	this.sex = sex;</span><br><span class="line">	this.sayName = function()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 原型对象创建，缺点：1、所有实例具有相同的属性；2、具有实例修改引用类型属性影响其他实例的风险</span><br><span class="line"> * @param &#123;[type]&#125; name [description]</span><br><span class="line"> * @param &#123;[type]&#125; age  [description]</span><br><span class="line"> * @param &#123;[type]&#125; sex  [description]</span><br><span class="line"> */</span><br><span class="line">function People()&#123;&#125;</span><br><span class="line">People.prototype = &#123;</span><br><span class="line">	constructor : People,</span><br><span class="line">	name : &apos;yangshuo&apos;,</span><br><span class="line">	age : 24,</span><br><span class="line">	sex : &apos;male&apos;,</span><br><span class="line">	hobby : [&apos;basketball&apos;, &apos;football&apos;, &apos;pingpang&apos;],</span><br><span class="line">	sayName : function()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="组合使用构造函数和原型模式"><a href="#组合使用构造函数和原型模式" class="headerlink" title="组合使用构造函数和原型模式"></a>组合使用构造函数和原型模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 组合使用构造函数和原型模式创建对象，最为稳妥</span><br><span class="line"> * @param &#123;[type]&#125; name [description]</span><br><span class="line"> * @param &#123;[type]&#125; sex  [description]</span><br><span class="line"> * @param &#123;[type]&#125; age  [description]</span><br><span class="line"> */</span><br><span class="line">function People(name, sex, age)&#123;</span><br><span class="line">	this.name = name;</span><br><span class="line">	this.age = age;</span><br><span class="line">	this.sex = sex;</span><br><span class="line">	this.hobby = [&apos;basketball&apos;, &apos;football&apos;, &apos;pingpang&apos;];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">People.prototype = &#123;</span><br><span class="line">	constructor : People,</span><br><span class="line">	sayName : function () &#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="动态原型模式"><a href="#动态原型模式" class="headerlink" title="动态原型模式"></a>动态原型模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 动态原型模式创建对象</span><br><span class="line"> * @param &#123;[type]&#125; name     [description]</span><br><span class="line"> * @param &#123;[type]&#125; age.     sex           [description]</span><br><span class="line"> * @param &#123;[type]&#125; sayName [description]</span><br><span class="line"> */</span><br><span class="line">function People(name, age. sex)&#123;</span><br><span class="line">	this.name = name;</span><br><span class="line">	this.age = age;</span><br><span class="line">	this.sex = sex;</span><br><span class="line">	if(typeof sayName !== &apos;function&apos;)&#123;</span><br><span class="line">		People.prototype.sayName = function ()&#123;</span><br><span class="line">			alert(this.name);</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="寄生模型"><a href="#寄生模型" class="headerlink" title="寄生模型"></a>寄生模型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 寄生模型创建对象，缺点：同工厂模式一样，无法使用instanceOf判断实例类型，优点：书写代码更优雅</span><br><span class="line"> * @param &#123;[type]&#125; name     [description]</span><br><span class="line"> * @param &#123;[type]&#125; age      [description]</span><br><span class="line"> * @param &#123;[type]&#125; sex      [description]</span><br><span class="line"> * @param &#123;[type]&#125; sayHello [description]</span><br><span class="line"> */</span><br><span class="line">function People(name, age, sex)&#123;</span><br><span class="line">	var Person = new Object();</span><br><span class="line">	Person.name = name;</span><br><span class="line">	Person.age = age;</span><br><span class="line">	Person.sex = sex;</span><br><span class="line">	Person.sayName = function()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;;</span><br><span class="line">	return Person;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function specialArray()&#123;</span><br><span class="line">	var sArray = new Array();</span><br><span class="line">	sArray.push.apply(sArray, arguments);</span><br><span class="line">	sArray.toPipedString = function ()&#123;</span><br><span class="line">		return this.join(&apos;|&apos;);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/02/26/组件化——组件梳理/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
