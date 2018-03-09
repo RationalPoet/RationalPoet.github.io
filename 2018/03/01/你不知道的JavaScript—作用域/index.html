@@ -43,7 +43,7 @@
     
     <title>
         
-            ES5中的面向对象编程 | 
+            你不知道的JavaScript—作用域 | 
         
         RationalPoet Blog --Mac
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",ES5,javascript">
+    <meta name="keywords" content=",《你不知道的JavaScript》,JavaScript,ES5">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -210,7 +210,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="RationalPoet Blog --Mac">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/02/28/ES5中的面向对象编程/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/03/01/你不知道的JavaScript—作用域/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="RationalPoet Blog --Mac">
@@ -225,16 +225,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/02/28/ES5中的面向对象编程/">
+    <meta property="og:url" content="http://yoursite.com/2018/03/01/你不知道的JavaScript—作用域/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="ES5中的面向对象编程 | RationalPoet Blog --Mac">
+    <meta property="og:title" content="你不知道的JavaScript—作用域 | RationalPoet Blog --Mac">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="ES5"> <meta property="og:article:tag" content="javascript"> 
+    <meta property="og:article:tag" content="《你不知道的JavaScript》"> <meta property="og:article:tag" content="JavaScript"> <meta property="og:article:tag" content="ES5"> 
 
     
-        <meta property="article:published_time" content="Wed Feb 28 2018 09:08:51 GMT+0800">
-        <meta property="article:modified_time" content="Thu Mar 01 2018 17:13:00 GMT+0800">
+        <meta property="article:published_time" content="Thu Mar 01 2018 17:24:00 GMT+0800">
+        <meta property="article:modified_time" content="Mon Mar 05 2018 17:01:32 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -242,7 +242,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/02/28/ES5中的面向对象编程/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/03/01/你不知道的JavaScript—作用域/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -254,10 +254,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/02/28/ES5中的面向对象编程/index.html",
-    "headline": "ES5中的面向对象编程",
-    "datePublished": "Wed Feb 28 2018 09:08:51 GMT+0800",
-    "dateModified": "Thu Mar 01 2018 17:13:00 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/03/01/你不知道的JavaScript—作用域/index.html",
+    "headline": "你不知道的JavaScript—作用域",
+    "datePublished": "Thu Mar 01 2018 17:24:00 GMT+0800",
+    "dateModified": "Mon Mar 05 2018 17:01:32 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "YoungSure",
@@ -275,7 +275,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",ES5,javascript",
+    "keywords": ",《你不知道的JavaScript》,JavaScript,ES5",
     "description": "",
 }
 </script>
@@ -341,7 +341,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#工厂模式"><span class="post-toc-number">1.</span> <span class="post-toc-text">工厂模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#构造函数"><span class="post-toc-number">2.</span> <span class="post-toc-text">构造函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原型对象"><span class="post-toc-number">3.</span> <span class="post-toc-text">原型对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组合使用构造函数和原型模式"><span class="post-toc-number">4.</span> <span class="post-toc-text">组合使用构造函数和原型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#动态原型模式"><span class="post-toc-number">5.</span> <span class="post-toc-text">动态原型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#寄生模型"><span class="post-toc-number">6.</span> <span class="post-toc-text">寄生模型</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么叫作用域"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么叫作用域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#一套设计良好的规则来存储变量，并可以在之后方便找到这些变量，这套规则就叫做“作用域”"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">一套设计良好的规则来存储变量，并可以在之后方便找到这些变量，这套规则就叫做“作用域”</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#词法作用域"><span class="post-toc-number">2.</span> <span class="post-toc-text">词法作用域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#作用域共有两种主要的工作模型。第一种是最为普遍的，被大多数编程语言所采用的词法作用域，另外一种叫作动态作用域。而JavaScript使用的即词法作用域"><span class="post-toc-number">2.0.1.</span> <span class="post-toc-text">作用域共有两种主要的工作模型。第一种是最为普遍的，被大多数编程语言所采用的词法作用域，另外一种叫作动态作用域。而JavaScript使用的即词法作用域</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#函数作用域"><span class="post-toc-number">3.</span> <span class="post-toc-text">函数作用域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#JavaScript中最常见的作用域气泡，通常指的是基于函数的作用域，由声明函数而形成的作用域就叫做函数作用域"><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">JavaScript中最常见的作用域气泡，通常指的是基于函数的作用域，由声明函数而形成的作用域就叫做函数作用域</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#块作用域"><span class="post-toc-number">4.</span> <span class="post-toc-text">块作用域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#在ES5及其之前的标准中，JavaScript中是有块作用域的，例如我们的with，还有try-catch，但是，这些东西的块作用域只是象征性的摆在那里，对于with的性能开销，和严格模式下的禁用，我们不会考虑使用，而try-catch，只能做达到try中参数error的声明来作为块作用域，暂时意义不大。我们这边重点讲一下ES6中新增的块作用域语法"><span class="post-toc-number">4.0.1.</span> <span class="post-toc-text">在ES5及其之前的标准中，JavaScript中是有块作用域的，例如我们的with，还有try-catch，但是，这些东西的块作用域只是象征性的摆在那里，对于with的性能开销，和严格模式下的禁用，我们不会考虑使用，而try-catch，只能做达到try中参数error的声明来作为块作用域，暂时意义不大。我们这边重点讲一下ES6中新增的块作用域语法</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -373,7 +373,7 @@
         
     
             <p class="article-headline-p">
-                ES5中的面向对象编程
+                你不知道的JavaScript—作用域
             </p>
         </div>
 
@@ -392,7 +392,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>YoungSure</strong>
-        <span>2月 28, 2018</span>
+        <span>3月 01, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -416,7 +416,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/ES5/">ES5</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/javascript/">javascript</a>
+        <a class="post_tag-link" href="/tags/ES5/">ES5</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/《你不知道的JavaScript》/">《你不知道的JavaScript》</a>
     </ul>
     
 
@@ -433,7 +433,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ES5中的面向对象编程&url=http://yoursite.com/2018/02/28/ES5中的面向对象编程/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=你不知道的JavaScript—作用域&url=http://yoursite.com/2018/03/01/你不知道的JavaScript—作用域/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -451,7 +451,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2018/02/28/ES5中的面向对象编程/index.html&title=ES5中的面向对象编程" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2018/03/01/你不知道的JavaScript—作用域/index.html&title=你不知道的JavaScript—作用域" target="_blank">
             <li class="mdl-menu__item">
                 分享到 LinkedIn
             </li>
@@ -473,12 +473,69 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 工厂模式创建对象，缺点：无法判别实例类型</span><br><span class="line"> * @param   name     </span><br><span class="line"> * @param   age      </span><br><span class="line"> * @param   sex      </span><br><span class="line"> * @param   sayHello </span><br><span class="line"> * @return           </span><br><span class="line"> */</span><br><span class="line">function people(name, age, sex)&#123;</span><br><span class="line">	var person = new Object();</span><br><span class="line">	person.name = name;</span><br><span class="line">	person.age = age;</span><br><span class="line">	person.sex = sex;</span><br><span class="line">	person.sayName = function()&#123;</span><br><span class="line">		alert(person.name);</span><br><span class="line">	&#125;;</span><br><span class="line">	return person;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 构造函数创建对象，缺点：重复创建共享方法</span><br><span class="line"> * @param  name     </span><br><span class="line"> * @param  age      </span><br><span class="line"> * @param  sex      </span><br><span class="line"> * @param  sayHello </span><br><span class="line"> */</span><br><span class="line">function People(name, age, sex)&#123;</span><br><span class="line">	this.name = name;</span><br><span class="line">	this.age = age;</span><br><span class="line">	this.sex = sex;</span><br><span class="line">	this.sayName = function()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 原型对象创建，缺点：1、所有实例具有相同的属性；2、具有实例修改引用类型属性影响其他实例的风险</span><br><span class="line"> * @param  name </span><br><span class="line"> * @param  age  </span><br><span class="line"> * @param  sex  </span><br><span class="line"> */</span><br><span class="line">function People()&#123;&#125;</span><br><span class="line">People.prototype = &#123;</span><br><span class="line">	constructor : People,</span><br><span class="line">	name : &apos;yangshuo&apos;,</span><br><span class="line">	age : 24,</span><br><span class="line">	sex : &apos;male&apos;,</span><br><span class="line">	hobby : [&apos;basketball&apos;, &apos;football&apos;, &apos;pingpang&apos;],</span><br><span class="line">	sayName : function()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="组合使用构造函数和原型模式"><a href="#组合使用构造函数和原型模式" class="headerlink" title="组合使用构造函数和原型模式"></a>组合使用构造函数和原型模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 组合使用构造函数和原型模式创建对象，最为稳妥</span><br><span class="line"> * @param  name </span><br><span class="line"> * @param  sex  </span><br><span class="line"> * @param  age  </span><br><span class="line"> */</span><br><span class="line">function People(name, sex, age)&#123;</span><br><span class="line">	this.name = name;</span><br><span class="line">	this.age = age;</span><br><span class="line">	this.sex = sex;</span><br><span class="line">	this.hobby = [&apos;basketball&apos;, &apos;football&apos;, &apos;pingpang&apos;];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">People.prototype = &#123;</span><br><span class="line">	constructor : People,</span><br><span class="line">	sayName : function () &#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="动态原型模式"><a href="#动态原型模式" class="headerlink" title="动态原型模式"></a>动态原型模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 动态原型模式创建对象</span><br><span class="line"> * @param  name     </span><br><span class="line"> * @param  age.     sex           </span><br><span class="line"> * @param  sayName </span><br><span class="line"> */</span><br><span class="line">function People(name, age. sex)&#123;</span><br><span class="line">	this.name = name;</span><br><span class="line">	this.age = age;</span><br><span class="line">	this.sex = sex;</span><br><span class="line">	if(typeof sayName !== &apos;function&apos;)&#123;</span><br><span class="line">		People.prototype.sayName = function ()&#123;</span><br><span class="line">			alert(this.name);</span><br><span class="line">		&#125;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="寄生模型"><a href="#寄生模型" class="headerlink" title="寄生模型"></a>寄生模型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 寄生模型创建对象，缺点：同工厂模式一样，无法使用instanceOf判断实例类型，优点：书写代码更优雅</span><br><span class="line"> * @param  name     </span><br><span class="line"> * @param  age      </span><br><span class="line"> * @param  sex      </span><br><span class="line"> * @param  sayHello </span><br><span class="line"> */</span><br><span class="line">function People(name, age, sex)&#123;</span><br><span class="line">	var Person = new Object();</span><br><span class="line">	Person.name = name;</span><br><span class="line">	Person.age = age;</span><br><span class="line">	Person.sex = sex;</span><br><span class="line">	Person.sayName = function()&#123;</span><br><span class="line">		alert(this.name);</span><br><span class="line">	&#125;;</span><br><span class="line">	return Person;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function specialArray()&#123;</span><br><span class="line">	var sArray = new Array();</span><br><span class="line">	sArray.push.apply(sArray, arguments);</span><br><span class="line">	sArray.toPipedString = function ()&#123;</span><br><span class="line">		return this.join(&apos;|&apos;);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="什么叫作用域"><a href="#什么叫作用域" class="headerlink" title="什么叫作用域"></a>什么叫作用域</h3><h5 id="一套设计良好的规则来存储变量，并可以在之后方便找到这些变量，这套规则就叫做“作用域”"><a href="#一套设计良好的规则来存储变量，并可以在之后方便找到这些变量，这套规则就叫做“作用域”" class="headerlink" title="一套设计良好的规则来存储变量，并可以在之后方便找到这些变量，这套规则就叫做“作用域”"></a>一套设计良好的规则来存储变量，并可以在之后方便找到这些变量，这套规则就叫做“作用域”</h5><ol>
+<li>JavaScript通常被归类为“解释执行”或“动态”语言。其实，JavaScript也是一门编译语言。只是与传统编译语言不同的是，它不是提前编译的，而是在代码执行前（几微秒甚至更短）编译完成的；</li>
+<li>任何JavaScript代码在执行之前都要进行编译；</li>
+<li>因为有代码“执行前编译”的存在，那么就存在编译器和执行引擎的配合工作。如下面一段代码示例，编译器生成代码后，引擎执行时会查找变量a是否声明过，这时就需要作用域的协助来进行查找，但是引擎执行怎么样的查找，会影响最终的查找结果。</li>
+<li>作用域嵌套：LHS 和 RHS 查询都会在当前执行作用域中开始，如果有需要（也就是说它们没有找到所需的标识符） ，就会向上级作用域继续查找目标标识符，这样每次上升一级作用域（一层楼） ，最后抵达全局作用域（顶层） ，无论找到或没找到都将停止； </li>
+<li>不成功的 RHS 引用会导致抛出 ReferenceError 异常。不成功的 LHS 引用会导致自动隐式地创建一个全局变量（非严格模式下）。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = 2;</span><br><span class="line">//引擎会对a进行LHS查询，对应的另一个叫RHS</span><br><span class="line">//其中L和R分别对应着“左侧”和“右侧”，即赋值操作的左侧和右侧</span><br><span class="line">//也就是说，当变量出现在赋值操作的左侧时进行LHS查询，在右侧时进行RHS查询</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="词法作用域"><a href="#词法作用域" class="headerlink" title="词法作用域"></a>词法作用域</h3><h5 id="作用域共有两种主要的工作模型。第一种是最为普遍的，被大多数编程语言所采用的词法作用域，另外一种叫作动态作用域。而JavaScript使用的即词法作用域"><a href="#作用域共有两种主要的工作模型。第一种是最为普遍的，被大多数编程语言所采用的词法作用域，另外一种叫作动态作用域。而JavaScript使用的即词法作用域" class="headerlink" title="作用域共有两种主要的工作模型。第一种是最为普遍的，被大多数编程语言所采用的词法作用域，另外一种叫作动态作用域。而JavaScript使用的即词法作用域"></a>作用域共有两种主要的工作模型。第一种是最为普遍的，被大多数编程语言所采用的词法作用域，另外一种叫作动态作用域。而JavaScript使用的即词法作用域</h5><ol>
+<li>词法作用域就是定义在词法阶段的作用域。即，词法作用域是由你写的代码时将变量和块作用域写在哪里决定的；</li>
+<li>一般情况下，写代码时写定的变量和块作用域当词法分析器处理代码时不会做任何改变，然而也有特殊情况（eval和with会更改作用域）：<ul>
+<li>eval，可以对一段包含一个或多个声明的“代码”字符串进行演算，并借此来修改已经存在的词法作用域（在运行时）；</li>
+<li>with，本质上是通过将一个对象的引用当作作用域来处理，将对象的属性当作作用域中的标识符来处理，从而创建了一个新的词法作用域（同样是在运行时）；</li>
+<li>这两个机制的副作用是引擎无法在编译时对作用域查找进行优化，因为引擎只能谨慎地认为这样的优化是无效的。使用这其中任何一个机制都将导致代码运行变慢。</li>
+</ul>
+</li>
+<li>作用域具有嵌套特性，且严格包含，作用域的最顶层为全局作用域：<ul>
+<li>作用域内查找时，如果在当前作用域内未查找（LHS或RHS）到变量，就会向上一层作用域进行查找，查到即返回，未查到则一直到全局作用域，不管是否查到结果都结束查找；</li>
+<li>作用域在查找到第一个匹配的标识符时就停止，在多层嵌套的作用域中可以定义同名标识符，这叫做“遮蔽效应”；</li>
+<li>词法作用域查找只会查找一级标识符。</li>
+</ul>
+</li>
+</ol>
+<h3 id="函数作用域"><a href="#函数作用域" class="headerlink" title="函数作用域"></a>函数作用域</h3><h5 id="JavaScript中最常见的作用域气泡，通常指的是基于函数的作用域，由声明函数而形成的作用域就叫做函数作用域"><a href="#JavaScript中最常见的作用域气泡，通常指的是基于函数的作用域，由声明函数而形成的作用域就叫做函数作用域" class="headerlink" title="JavaScript中最常见的作用域气泡，通常指的是基于函数的作用域，由声明函数而形成的作用域就叫做函数作用域"></a>JavaScript中最常见的作用域气泡，通常指的是基于函数的作用域，由声明函数而形成的作用域就叫做函数作用域</h5><ol>
+<li>由于作用域的特性（作用域气泡的嵌套），导致内层作用域可以访问外层作用域的变量，反过来会报错。这一特性会变得很有意思；</li>
+<li>隐藏内部实现，把所写的代码片段通过函数声明对其进行包装，实际上就把这些代码隐藏掉了。这样做的好处，主要是引申了编码设计中的最小特权原则，可以做到一定的数据私密性；</li>
+<li>规避冲突， 隐藏作用域中变量的一个好处是可以避免同名标记符之间的冲突：<ul>
+<li>全局命名空间，主要是一些第三方库在使用时会暴露其变量在全局变量中，这样就存在命名冲突，甚至覆盖的风险；</li>
+<li>模块管理，使用模块管理器来管理第三方库是一个比较好的做法，然而事实上，模块管理器依然是建立在作用域“隐藏内部实现”这一神奇规则上的。</li>
+</ul>
+</li>
+<li>匿名和具名函数，在隐藏内部实现的时候（把变量和作用域包裹在一个函数声明里），依然会有问题，即函数名也会存在变量污染的问题。因此，我们就需要借助IIFE（立即执行函数）来做这件事情，即(function <a href="">a</a>{xxx})(),这样就可以规避掉上述问题。这边的IIFE，其中的函数可以是具名的，也可以是匿名的，但最佳实践为使用具名的IIFE，理由如下：<ul>
+<li>匿名函数在栈追踪中不会显示出有意义的函数名，使得调试很困难；</li>
+<li>如果没有函数名，当函数需要引用自身时只能使用已经过期的 arguments.callee 引用，比如在递归中。另一个函数需要引用自身的例子，是在事件触发后事件监听器需要解绑自身；</li>
+<li>匿名函数省略了对于代码可读性/可理解性很重要的函数名。一个描述性的名称可以让代码不言自明。</li>
+</ul>
+</li>
+<li>IIFE的进阶使用，就是将其当做函数调用，并将参数传进去，如下示例代码：<ul>
+<li>这种使用方式可以很好的改进代码风格，在做好最小使用特权的同时也做到了规避命名冲突、更好的代码调试；</li>
+<li>其中有一个细节，就是入参传入的undefined参数是为了保证整个IIFE中的undefined为真正的undefined。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(function a(undefined)&#123;</span><br><span class="line">    var a;</span><br><span class="line">    if ( a === undefined ) &#123;</span><br><span class="line">        alert(&apos;a is undefined&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)(undefined);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="块作用域"><a href="#块作用域" class="headerlink" title="块作用域"></a>块作用域</h3><h5 id="在ES5及其之前的标准中，JavaScript中是有块作用域的，例如我们的with，还有try-catch，但是，这些东西的块作用域只是象征性的摆在那里，对于with的性能开销，和严格模式下的禁用，我们不会考虑使用，而try-catch，只能做达到try中参数error的声明来作为块作用域，暂时意义不大。我们这边重点讲一下ES6中新增的块作用域语法"><a href="#在ES5及其之前的标准中，JavaScript中是有块作用域的，例如我们的with，还有try-catch，但是，这些东西的块作用域只是象征性的摆在那里，对于with的性能开销，和严格模式下的禁用，我们不会考虑使用，而try-catch，只能做达到try中参数error的声明来作为块作用域，暂时意义不大。我们这边重点讲一下ES6中新增的块作用域语法" class="headerlink" title="在ES5及其之前的标准中，JavaScript中是有块作用域的，例如我们的with，还有try-catch，但是，这些东西的块作用域只是象征性的摆在那里，对于with的性能开销，和严格模式下的禁用，我们不会考虑使用，而try-catch，只能做达到try中参数error的声明来作为块作用域，暂时意义不大。我们这边重点讲一下ES6中新增的块作用域语法"></a>在ES5及其之前的标准中，JavaScript中是有块作用域的，例如我们的with，还有try-catch，但是，这些东西的块作用域只是象征性的摆在那里，对于with的性能开销，和严格模式下的禁用，我们不会考虑使用，而try-catch，只能做达到try中参数error的声明来作为块作用域，暂时意义不大。我们这边重点讲一下ES6中新增的块作用域语法</h5><ol>
+<li>let，let 关键字可以将变量绑定到所在的任意作用域中（通常是 { .. } 内部） 。换句话说， let为其声明的变量隐式地绑定了所在的块作用域，如示例代码1.1;<ul>
+<li>let 将变量附加在一个块作用域中的行为是隐式的，在修改代码时会产生代码混乱。为块作用域显示地创建块可以很好的解决这个问题。如下示例代码1.2；</li>
+<li>用let创建的变量不会在块作用域内进行提升。声明代码运行之前，声明并不存在，也就意味着示例代码1.3会报错；</li>
+</ul>
+</li>
+<li>利用块作用域可以很好的配合垃圾回收机制进行内存的及时回收，如示例代码2.1；</li>
+<li>let循环问题，如示例代码1.1中的for循环，for循环头部的let不仅将i绑定到了for循环的块中，事实上它将其重新绑定到了循环的每一个迭代中，确保使用上一个循环迭代的值重新进行赋值。</li>
+<li>const， 另外一个创建块作用域的声明语句，用作常量的声明<ul>
+<li>使用const声明的常量，必须赋予初始值；</li>
+<li>在声明时赋予的值，在其后的操作中都不能对其进行修改，否则会报错；</li>
+<li>如果声明的常量为对象，则其后只要不修改该对象常量的引用指向，我们仍可以修改该对象的属性值。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//示例代码1.1</span><br><span class="line">for(let i = 0; i &lt; 10; i ++) &#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">console.log(i); //运行到这行的时候会报错：RefrenceError:i is not defined</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//示例代码1.2</span><br><span class="line">var foo = true;</span><br><span class="line">if(foo) &#123;</span><br><span class="line">    let bar = foo * 2;</span><br><span class="line">    bar = something(bar);</span><br><span class="line">    console.log(bar);</span><br><span class="line">&#125;</span><br><span class="line">console.log(bar) //RefrenceError</span><br><span class="line"></span><br><span class="line">//为块作用域显式地创建块</span><br><span class="line">var foo = true;</span><br><span class="line">if(foo) &#123;</span><br><span class="line">    &#123; // 显式的块</span><br><span class="line">        let bar = foo * 2;</span><br><span class="line">        bar = something(bar);</span><br><span class="line">        console.log(bar);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//也就是说，只要声明是有效的，在声明中的任意位置都可以用&#123;...&#125;来为let创建一个绑定的块</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//示例代码1.3</span><br><span class="line">&#123;</span><br><span class="line">    console.log(foo);  // RefrenceError</span><br><span class="line">    let foo = &apos;hello world&apos;; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//示例代码2.1</span><br><span class="line">function process() &#123;xxx&#125;</span><br><span class="line">var bigData = &#123;xxx&#125;;</span><br><span class="line">process(bigData);</span><br><span class="line">var btn = document.getElementById(&apos;btn&apos;);</span><br><span class="line">btn.addEventListener(&apos;click&apos;, function() &#123;</span><br><span class="line">    console.log(&apos;hello world&apos;);</span><br><span class="line">&#125;);</span><br><span class="line">//在某些浏览器的实现里，可能会把click函数处理为包裹整个作用域的闭包，那么bigDat在处理完之后很可能一直不会被释放，也就造成了内存泄露，我们可以使用如下块作用域解决这个问题：</span><br><span class="line"></span><br><span class="line">function process() &#123;xxx&#125;</span><br><span class="line">&#123;</span><br><span class="line">    let bigData = &#123;xxx&#125;;</span><br><span class="line">    process(bigData);</span><br><span class="line">&#125;</span><br><span class="line">var btn = document.getElementById(&apos;btn&apos;);</span><br><span class="line">btn.addEventListener(&apos;click&apos;, function() &#123;</span><br><span class="line">    console.log(&apos;hello world&apos;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
         
     
 
@@ -498,7 +555,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/02/28/我不知道的盒子模型/" id="post_nav-newer" class="prev-content">
+        <a href="/2018/03/05/你不知道的JavaScript—提升/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -512,7 +569,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2018/02/26/组件化——组件梳理/" id="post_nav-older" class="next-content">
+        <a href="/2018/02/28/我不知道的盒子模型/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
