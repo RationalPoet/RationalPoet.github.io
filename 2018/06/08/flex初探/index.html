@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",CSS,Flex">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -230,11 +230,11 @@
     <meta property="og:title" content="flex初探 | RationalPoet Blog --Mac">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="CSS"> <meta property="og:article:tag" content="Flex"> 
 
     
         <meta property="article:published_time" content="Fri Jun 08 2018 15:08:43 GMT+0800">
-        <meta property="article:modified_time" content="Fri Jun 08 2018 15:08:43 GMT+0800">
+        <meta property="article:modified_time" content="Wed Jun 13 2018 18:24:05 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -257,7 +257,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/06/08/flex初探/index.html",
     "headline": "flex初探",
     "datePublished": "Fri Jun 08 2018 15:08:43 GMT+0800",
-    "dateModified": "Fri Jun 08 2018 15:08:43 GMT+0800",
+    "dateModified": "Wed Jun 13 2018 18:24:05 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "YoungSure",
@@ -275,7 +275,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",CSS,Flex",
     "description": "",
 }
 </script>
@@ -334,6 +334,15 @@
 
     <!-- Left aligned menu below button -->
     
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是flex？"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是flex？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#flex的各项属性"><span class="post-toc-number">2.</span> <span class="post-toc-text">flex的各项属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#flex的属性详解"><span class="post-toc-number">3.</span> <span class="post-toc-text">flex的属性详解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#容器属性"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">容器属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#flex项目属性"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">flex项目属性</span></a></li></ol></li></ol>
+    </ul>
     
 
 
@@ -401,6 +410,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/CSS/">CSS</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Flex/">Flex</a>
+    </ul>
+    
 
     <!-- Share -->
     
@@ -455,7 +473,84 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <h3 id="什么是flex？"><a href="#什么是flex？" class="headerlink" title="什么是flex？"></a>什么是flex？</h3><p>&nbsp;&nbsp;flex其实并不是新潮的东西，而是w3c在2009年提出的一种可以简洁、快速弹性布局的样式属性，其核心做法是给予容器以控制内部元素高度、宽度、布局结构的能力。  </p>
+<p>&nbsp;&nbsp;该属性处在在css3规范中，对浏览器的兼容性，除了IE需要10+，其他浏览器基本上都可以使用（其中在webkit内核的浏览器中使用时，要加上-webket-前缀）  </p>
+<p>&nbsp;&nbsp;flex的布局中，只有flex容器和flex项目的概念，我们只需把父容器设置为flex容器（display:flex），那么它内部的子元素就自动变为了flex项目。之后我们只需要按照自己的意愿对容器做设置，或对flex项目做个性化设置就好了。<br><img src="../image/flex/flex.png" alt="flex的构成图"></p>
+<ol>
+<li>flex容器里最少包含两根轴，水平的是主轴、竖直的为交叉轴；</li>
+<li>主轴与左边框的交点就是主轴开始的地方即main start;</li>
+<li>主轴与右边框的交点教main end;</li>
+<li>交叉轴与上边框的交点，即交叉轴开始的地方，叫cross start;</li>
+<li>交叉轴与下边框的交点，叫cross end;</li>
+<li>flex项目按主轴或交叉轴排列，在主轴方向上占据的宽度成为main axis，在交叉轴方向上占据的宽度称为cross axis。<br><strong>额外需要注意的是，使用flex布局后，flex项目的float, clear, vertical-align属性将失效</strong>  <h3 id="flex的各项属性"><a href="#flex的各项属性" class="headerlink" title="flex的各项属性"></a>flex的各项属性</h3></li>
+</ol>
+<p><img src="../image/flex/flex-attribute.png" alt="flex的各项属性">  </p>
+<h3 id="flex的属性详解"><a href="#flex的属性详解" class="headerlink" title="flex的属性详解"></a>flex的属性详解</h3><h4 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h4><ol>
+<li>flex-direction，决定容器内flex项目在主轴上的排列方式：row(默认值)|row-reverse|column|column-reverse  </li>
+</ol>
+<ul>
+<li>row:项目沿主轴从左至右排列</li>
+<li>row-reverse:项目沿主轴从右至左排列</li>
+<li>column:项目沿纵轴从上往下排列</li>
+<li>column-reverse:项目沿纵轴自下而上排列  </li>
+</ul>
+<p><img src="../image/flex/flex-direction-row.png" alt="主轴正序排列"><br><img src="../image/flex/flex-direction-column.png" alt="纵轴正序排列"><br><strong>细心点可以发现，当flex项目在纵轴排列时，当容器提供不了足够的高度时，flex项目将垂直平分当前容器高度</strong>  </p>
+<p><strong>在调试这边效果的时候发现一个比较有趣的现象：当设置了flex-direction属性为column系列时，flex项目所对应的flex-basis属性之前针对的主轴也由此变成了针对交叉轴进行设置，从而也导致了flex项目的height属性失效（测试时发现basis值是有最小值极限的，且在一定范围内是受font-size影响的。chrome浏览器的最小支持字体大小为12px,对应着此时flex-basis的最小值为16px）</strong>  </p>
+<ol>
+<li>flex-wrap，决定当前的flex项目在主轴上排列不下时，是否要换行  </li>
+</ol>
+<ul>
+<li>nowarp(默认),不换行，自动缩小项目平分主轴宽度</li>
+<li>wrap,换行，且第一行在上方</li>
+<li>wrap-reverser,换行，且第一行在下方<br><img src="../image/flex/flex-wrap-wrap.png" alt="换行，第一行在上面"><br><img src="../image/flex/flex-wrap-wrap-reverse.png" alt="换行，第一行在下面">  </li>
+</ul>
+<ol>
+<li>flex-flow,是flex-direction和flex-wrap的简写，默认是：row nowrap  </li>
+<li>justify-content,决定当前flex项目在主轴上的对齐方式</li>
+</ol>
+<ul>
+<li>flex-start,左对齐</li>
+<li>flex-end,右对齐</li>
+<li>center,水平居中对齐</li>
+<li>space-between,两端对齐</li>
+<li>space-around,沿主轴均匀分布<br><img src="../image/flex/justify-content-flex-start.png" alt="左对齐"><br><img src="../image/flex/justify-content-flex-end.png" alt="右对齐"><br><img src="../image/flex/justify-content-center.png" alt="居中对齐"><br><img src="../image/flex/justify-content-space-between.png" alt="两端对齐"><br><img src="../image/flex/justify-content-space-around.png" alt="均匀分布"></li>
+</ul>
+<ol>
+<li>align-items,决定当前flex项目在交叉轴上的对齐方式</li>
+</ol>
+<ul>
+<li>flex-start,垂直靠顶对齐</li>
+<li>flex-end,垂直靠底对齐</li>
+<li>center,垂直居中对齐</li>
+<li>bass-line, flex项目第一行文字的底部对齐</li>
+<li>stretch,flex项目未设置高度时，将和容器等高对齐<br><img src="../image/flex/align-items-flex-start.png" alt="垂直靠顶对齐"><br><img src="../image/flex/align-items-flex-end.png" alt="垂直靠底对齐"><br><img src="../image/flex/align-items-center.png" alt="垂直居中对齐"><br><img src="../image/flex/align-items-baseline.png" alt="flex项目第一行文字底部对齐"><br><img src="../image/flex/align-items-stretch.png" alt="flex项目未设置高度将和容器等高对齐"></li>
+</ul>
+<ol>
+<li>align-content,定义了当有多根主轴时，即item不止一行时，多行在交叉轴轴上的对齐方式。注意当有多行时，定义了align-content后，align-items属性将失效，假设主轴为水平方向，则有下列情况</li>
+</ol>
+<ul>
+<li>flex-start,垂直靠上对齐</li>
+<li>flex-end,垂直靠底对齐</li>
+<li>center,垂直居中对齐</li>
+<li>space-between，垂直两端对齐</li>
+<li>space-around,垂直沿轴线均匀分布</li>
+<li>stretch，各行将根据其flex-grow值充分填充剩余空间（沿主轴方向）<br><img src="../image/flex/align-content-flex-start.png" alt="各行沿交叉轴垂直靠上对齐"><br><img src="../image/flex/align-content-flex-end.png" alt="各行沿交叉轴垂直靠底对齐"><br><img src="../image/flex/align-content-center.png" alt="各行垂直居中对齐"><br><img src="../image/flex/align-content-space-between.png" alt="各行沿交叉轴两端对齐"><br><img src="../image/flex/align-content-space-around.png" alt="各行沿交叉轴均匀分布"><br><img src="../image/flex/align-content-streth.png" alt="各行将根据其flex-grow值充分填充剩余空间(沿主轴方向)"><br><strong><em>align-items和align-content有相同的功能，不过不同点是它是用来让每一个单行的容器居中而不是让整个容器居中</em></strong><br><strong><em>align-content属性只适用于多行的flex容器，并且当侧轴上有多余空间使flex容器内的flex线对齐。</em></strong><h4 id="flex项目属性"><a href="#flex项目属性" class="headerlink" title="flex项目属性"></a>flex项目属性</h4></li>
+<li>order,是整数，默认值为0，整数越小，item越靠前。<br><img src="../image/flex/order-x.png" alt="order">  </li>
+<li>flex-grow, 定义了当flex容器有多余空间时，item是否放大。默认值为0，即当有多余空间时也不放大；可能的值为整数，表示不同item的放大比例</li>
+<li>flex-shrink,定义了当容器空间不足时，item是否缩小。默认值为1，表示当空间不足时，item自动缩小，其可能的值为整数，表示不同item的缩小比例</li>
+<li>flex-basis,表示项目在主轴上占据的空间，默认值为auto<br><img src="../image/flex/flex-basis-xx.png" alt="flex-basis"> </li>
+<li>flex,是flex-grow、flex-shrink、flex-basis的缩写，默认值为：0 1 auto,即不放大会缩小宽度自适应</li>
+<li>align-self,允许flex项目单独设置自身的在交叉轴上的对齐方式，默认值为auto<ul>
+<li>auto,和父元素的align-self的值保持一致</li>
+<li>flex-start，顶端对齐</li>
+<li>flex-end，底部对齐</li>
+<li>center，居中对齐</li>
+<li>base-line，flex项目第一行文字底部对齐</li>
+<li>streth，当flex项目没设置高度时，将和容器等高对齐<br><img src="../image/flex/align-self-flex-end.png" alt="flex-end"><br><img src="../image/flex/align-self-center.png" alt="center"><br><img src="../image/flex/align-self-streth.png" alt="streth"></li>
+</ul>
+</li>
+</ul>
+
         
     
 
