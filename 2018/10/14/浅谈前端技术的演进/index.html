@@ -43,7 +43,7 @@
     
     <title>
         
-            about | 
+            浅谈前端技术的演进 | 
         
         RationalPoet Blog --Mac
     </title>
@@ -210,7 +210,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="RationalPoet Blog --Mac">
-    <meta name="msapplication-starturl" content="http://yoursite.com/about/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/10/14/浅谈前端技术的演进/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="RationalPoet Blog --Mac">
@@ -225,13 +225,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/about/">
+    <meta property="og:url" content="http://yoursite.com/2018/10/14/浅谈前端技术的演进/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="about | RationalPoet Blog --Mac">
+    <meta property="og:title" content="浅谈前端技术的演进 | RationalPoet Blog --Mac">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     
 
+    
+        <meta property="article:published_time" content="Sun Oct 14 2018 10:04:46 GMT+0800">
+        <meta property="article:modified_time" content="Sun Oct 14 2018 18:15:58 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -239,13 +242,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/about/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/10/14/浅谈前端技术的演进/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/10/14/浅谈前端技术的演进/index.html",
+    "headline": "浅谈前端技术的演进",
+    "datePublished": "Sun Oct 14 2018 10:04:46 GMT+0800",
+    "dateModified": "Sun Oct 14 2018 18:15:58 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "YoungSure",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/plogo.jpg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "RationalPoet Blog --Mac",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
 
 
     
@@ -281,6 +314,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端的诞生"><span class="post-toc-number">1.</span> <span class="post-toc-text">前端的诞生</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#web"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">web</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#w3c"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">w3c</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JavaScript"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">JavaScript</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#EcmaScript"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">EcmaScript</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#动态网站"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">动态网站</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#静态网站自身无法避免的一些问题，在之后的web开发中日益显露出来，如数据内容是服务端到前端的单向流通，大量相似页面无法复用，内容维护成本巨大等等问题。因此有智慧的开发者们便想到了控制服务端动态生成页面，以及之后的得益于xhr异步通信技术而发明设计的Ajax技术。"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">静态网站自身无法避免的一些问题，在之后的web开发中日益显露出来，如数据内容是服务端到前端的单向流通，大量相似页面无法复用，内容维护成本巨大等等问题。因此有智慧的开发者们便想到了控制服务端动态生成页面，以及之后的得益于xhr异步通信技术而发明设计的Ajax技术。</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#H5"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">H5</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Node-js"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">Node.js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#前端的MV-架构"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">前端的MV*架构</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ES6、Bable、TypeScript"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">ES6、Bable、TypeScript</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#现行开发模式"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">现行开发模式</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -307,7 +373,7 @@
         
     
             <p class="article-headline-p">
-                about
+                浅谈前端技术的演进
             </p>
         </div>
 
@@ -326,7 +392,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>YoungSure</strong>
-        <span>2月 23, 2018</span>
+        <span>10月 14, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -358,7 +424,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=about&url=http://yoursite.com/about/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=浅谈前端技术的演进&url=http://yoursite.com/2018/10/14/浅谈前端技术的演进/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -376,7 +442,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/about/index.html&title=about" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2018/10/14/浅谈前端技术的演进/index.html&title=浅谈前端技术的演进" target="_blank">
             <li class="mdl-menu__item">
                 分享到 LinkedIn
             </li>
@@ -398,7 +464,53 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="about-me-hello-world"><a href="#about-me-hello-world" class="headerlink" title="about me hello world"></a>about me hello world</h3>
+        <h3 id="前端的诞生"><a href="#前端的诞生" class="headerlink" title="前端的诞生"></a>前端的诞生</h3><h4 id="web"><a href="#web" class="headerlink" title="web"></a>web</h4><p>1989年，在欧洲粒子物理实验室工作的Tim Berners Lee向其领导提出了一项名为Information Management: A Proposal的提议：使来自世界各地的远程站点的研究人员能够组织和汇集信息，在个人计算机上访问大量的科研文献，并建议在文档中链接其他文档，这就是Web的原型</p>
+<h4 id="w3c"><a href="#w3c" class="headerlink" title="w3c"></a>w3c</h4><p>1994年，由Tim牵头，成立了万维网组织</p>
+<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><p>1995年，NetScape的 Brendan Eich用10天时间设计了JavaScript，起初名为Mocha，后来改名LiveScript，之后又为了蹭上当年风靡一时的Java的热度改名为JavaScript</p>
+<h4 id="EcmaScript"><a href="#EcmaScript" class="headerlink" title="EcmaScript"></a>EcmaScript</h4><ul>
+<li>1996年11月年，为了应对微软在浏览器市场的蚕食，巩固NetScape的市场主导地位，NetScape将JavaScript提到ECMA申请国际标准化，1997年6月，ECMA以JavaScript做为基础制定了ECMAScript标准规范ECMA-262。</li>
+<li>1998年6月，ECMAScript2规范2发布；</li>
+<li>1999年12月，ECMAScript3规范发布，在此后的十年间，ECMAScript规范基本没有发生变动。ECMAScript3成为当今主流浏览器最广泛使用和实现的语言规范基础。</li>
+<li>至今，在考虑比较老旧浏览器兼容性的一些站点上，大部分仍然使用的是ECMA3及ECMA3.1（ECMA5）</li>
+</ul>
+<h4 id="动态网站"><a href="#动态网站" class="headerlink" title="动态网站"></a>动态网站</h4><h5 id="静态网站自身无法避免的一些问题，在之后的web开发中日益显露出来，如数据内容是服务端到前端的单向流通，大量相似页面无法复用，内容维护成本巨大等等问题。因此有智慧的开发者们便想到了控制服务端动态生成页面，以及之后的得益于xhr异步通信技术而发明设计的Ajax技术。"><a href="#静态网站自身无法避免的一些问题，在之后的web开发中日益显露出来，如数据内容是服务端到前端的单向流通，大量相似页面无法复用，内容维护成本巨大等等问题。因此有智慧的开发者们便想到了控制服务端动态生成页面，以及之后的得益于xhr异步通信技术而发明设计的Ajax技术。" class="headerlink" title="静态网站自身无法避免的一些问题，在之后的web开发中日益显露出来，如数据内容是服务端到前端的单向流通，大量相似页面无法复用，内容维护成本巨大等等问题。因此有智慧的开发者们便想到了控制服务端动态生成页面，以及之后的得益于xhr异步通信技术而发明设计的Ajax技术。"></a>静态网站自身无法避免的一些问题，在之后的web开发中日益显露出来，如数据内容是服务端到前端的单向流通，大量相似页面无法复用，内容维护成本巨大等等问题。因此有智慧的开发者们便想到了控制服务端动态生成页面，以及之后的得益于xhr异步通信技术而发明设计的Ajax技术。</h5><ol>
+<li>SSR  <ul>
+<li>jsp/php/asp.net等技术都是为了实现动态输出网页内容而设计的SSI(Server Side Render)技术；</li>
+<li>这些技术的共同点就是利用自身预先设计的语法规则在服务端进行逻辑处理、数据组装、HTML页面的渲染，最终响应给浏览器一个完整的html页面；</li>
+<li>在初步阶段的SSR技术蓬勃发展后，在一些应用场景复杂，业务复杂的大型项目中爆发出一些突出问题：如在页面布局代码中嵌入了冗杂的业务代码，修改html页面布局或结构都需要重新编译页面，前后端开发的界限不明确等。</li>
+<li>为了试着去解决或减轻上述问题，社区便推出了一些服务端渲染模板引擎：如基于Java语言的Velocity、FreeMarker，以及之后的MVC框架解决方案：Spring/Structs等。<br><img src="/image/fontend/npm.png" alt="SSR模式下的前端开发"></li>
+</ul>
+</li>
+<li>CSR  <ul>
+<li>最典型的CSI(Client Side Render)技术使用案例就是Google的Gmail和Google map，正是因为Google率先发明并把Ajax技术使用在了动态页面开发中，才让Ajax技术第一次进入到前端开发的大众视野，从而引领了Ajax技术在前端开发中的一股巨大浪潮；</li>
+<li>Ajax技术在web开发中的使用，让web前端开发可以做更多的事情，如异步刷新局部内容，异步与服务端做交互。</li>
+<li>在ECMA-262标准发布后，以FireFox和Opera为代表的ECMA标准阵营和微软的IEJScript阵营产生激烈碰撞，浏览器实现的差异性简直是前端开发的噩梦；</li>
+<li>为了解决浏览器的兼容性问题，Dojo,Jquery,YUI,ExtJs等前端框架相继诞生，其中JQuery独领风骚；</li>
+</ul>
+</li>
+</ol>
+<h4 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h4><ul>
+<li>1999年，W3C发布了HTML 4.0.1版本，在之后的几年，没有再发布更新的Web标准。随着Web的迅猛发展，旧的Web标准已不能满足Web应用的快速增长。</li>
+<li>2007年，获得W3C接纳，并成立了新的HTML工作团队。2008年1月22日，第一份正式草案发布。</li>
+<li>HTML5草案发布不久，Google在2008年12月发布了Chrome浏览器，加入了第二次浏览器大战当中。Chrome使用了Safari开源的WebKit作为布局引擎，并且研发了高效的JavaScript引擎V8。</li>
+<li>第二次浏览器大战中，各个浏览器厂商都以提升JavaScript运行效率和支持HTML5各种新特性为主要目标，促进了浏览器的良性竞争。在这一场战争中，Chrome攻城略地，抢夺IE市场份额。2013年，Chrome超过IE，成为市场份额最高的浏览器。2016年，Chrome占据了浏览器市场的半壁江山。</li>
+<li>2014年10月28日，W3C正式发布HTML 5.0推荐标准。<br><img src="/image/fontend/chrome.png" alt="2017Chrome浏览器的市场占有率"><h4 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h4></li>
+<li>2008年Chrome发布，其JavaScript引擎V8的高效执行引起了Ryan Dahl的注意。2009年，Ryan利用Chrome的V8引擎打造了基于事件循环的异步I/O框架——Node.js诞生;</li>
+<li>Node.js的出现吸引了很多前端开发人员开始用JavaScript开发服务器代码，其异步编程风格也深受开发人员的喜爱。Node.js的伟大不仅在于拓展了JavaScript在服务器端的无限可能，更重要的是它构建了一个庞大的生态系统;</li>
+<li>2010年1月，NPM作为Node.js的包管理系统首次发布。开发人员可以按照CommonJS的规范编写Node.js模块，然后将其发布到NPM上面供其他开发人员使用。目前NPM具有40万左右的模块，是世界上最大的包模块管理系统。<br><img src="/image/fontend/npm.png" alt="NPM模块的数据统计"><h4 id="前端的MV-架构"><a href="#前端的MV-架构" class="headerlink" title="前端的MV*架构"></a>前端的MV*架构</h4></li>
+<li>随着HTML5的流行，前端不再是人们眼中的小玩意，以前在C/S中实现的桌面软件的功能逐步迁移到了前端，前端的代码逻辑逐渐变得复杂起来；</li>
+<li>这些MV<em>框架的出现，网页逐渐由Web Site演变成了Web App，最终导致了复杂的单页应用（ Single Page Application）的出现。<br>![现代MV</em>架构](/image/fontend/mvc.png)</li>
+</ul>
+<h4 id="ES6、Bable、TypeScript"><a href="#ES6、Bable、TypeScript" class="headerlink" title="ES6、Bable、TypeScript"></a>ES6、Bable、TypeScript</h4><ul>
+<li>2015年6月，ECMAScript 6.0发布。该版本增加了许多新的语法，包括支持let、const、Arrow function、Class、Module、Promise、Iterator、Generator、Set、Map、async、Symbol、Proxy、Reflect、Decorator等。TC39委员会计划以后每年都发布一个新版本的ECMAScript，所以ECMAScript 6.0改名为ECMAScript 2015。</li>
+<li>在ECMAScript的各个版本中，ECMAScript 6.0无疑最受人瞩目的，它增加了许多新特性，极大拓展了JavaScript语法和能力，以至于许多浏览器都只能支持部分ES6中的新特性。随之，Babel和TypeScript逐渐流行起来，编写ES6代码，然后用Babel或TypeScript将其编译为ES5等浏览器支持的JavaScript。</li>
+</ul>
+<h4 id="现行开发模式"><a href="#现行开发模式" class="headerlink" title="现行开发模式"></a>现行开发模式</h4><ul>
+<li>前端采用Vue全家桶的MVVM架构，基于WebPack构建工具进行项目构建，结合使用axios与服务端进行交互数据；</li>
+<li>服务端专心处理业务数据，直接向前端提供服务数据即可。<br><img src="/image/fontend/vue.png" alt="现行开发结构"></li>
+</ul>
+<p>html(1989-&gt;1994 Tim Berners Lee) -&gt; js(1995 Brendan Eich) -&gt; ECMA标准(1997) -&gt; jsp/asp/php -&gt; spring/struct -&gt; ajax(2004 Gmail) -&gt; SPA -&gt; 兼容/jquery/YUI/ExtJS -&gt; H5(2008) -&gt;Nods.js(2008 Ryan Dahl) -&gt; NPM -&gt;MV*架构(2010 angular/Knockout/Backbone/React/Vue) -&gt; ES6(2015) -&gt; Babel/TypeScript</p>
+
         
     
 
@@ -423,6 +535,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/06/29/移动端尺寸适配——一种简单的rem设置方案/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -613,6 +733,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
