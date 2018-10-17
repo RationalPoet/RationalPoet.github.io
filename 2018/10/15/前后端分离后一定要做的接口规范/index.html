@@ -234,7 +234,7 @@
 
     
         <meta property="article:published_time" content="Mon Oct 15 2018 11:10:47 GMT+0800">
-        <meta property="article:modified_time" content="Tue Oct 16 2018 16:07:45 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 17 2018 14:05:35 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -257,7 +257,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/index.html",
     "headline": "前后端分离后一定要做的接口规范",
     "datePublished": "Mon Oct 15 2018 11:10:47 GMT+0800",
-    "dateModified": "Tue Oct 16 2018 16:07:45 GMT+0800",
+    "dateModified": "Wed Oct 17 2018 14:05:35 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "YoungSure",
@@ -468,8 +468,7 @@
 <h2 id="痛点"><a href="#痛点" class="headerlink" title="痛点"></a>痛点</h2><ol>
 <li>接口迭代问题：接口的修改记录，历史存档都存在很大的问题，有些历史遗留问题需要查找老接口才能排查问题，但是基本上要先去扒代码、看git历史、diff代码，人工脑力回忆等手段去解决；</li>
 <li>接口请求格式：存在新旧接口请求格式并存的情况，请求旧接口使用的是一种方式（请求体带参），请求新接口是另外一种方式（rest接口在url中直接传参）；</li>
-<li>接口请求方式：新接口已经统一采用rest方式，但是请求方式目前只有get、post两种方式，是否考虑采用更符合rest风格的其他两种请求方式（delete、put）以更易于区分请求动作和接口含义？</li>
-<li>接口响应错误时的错误码：目前接口响应数据的格式基本有一个大概的模型，即：body字段存放响应数据、info字段返回响应描述、status字段存放请求状态码，当前很多情况下会发生接口响应失败，即使是不同的原因造成的接口响应失败，但status字段总是1000，造成每次排查错误都要扒日志、查找相关接口代码，是否考虑定制化常见错误码，并做错误码管理？</li>
+<li>接口响应错误时的错误信息：目前接口响应数据的格式基本有一个大概的模型，即：body字段存放响应数据、info字段返回响应描述、status字段存放请求状态码，当前很多情况下会发生接口响应失败，即使是不同的原因造成的接口响应失败，但status字段总是1000/99等少数错误码，而错误信息页总是”请求失败”等模糊字样，造成每次排查错误都要扒日志、查找相关接口代码，是否考虑定制化常见错误码，并做错误码管理？</li>
 <li>接口返回数据量： 有些接口返回大量无用数据，甚至数据嵌套层级较深，导致前端处理数据比较麻烦；</li>
 <li>接口要做逻辑，不能让前端做：存在很多接口只返回了一些基础数据，其业务逻辑/数据处理放在了前端进行处理，弊端多多，不利于前后端解耦、业务剥离、数据排查等问题；</li>
 <li>swagger-ui接口查找上存在一定的难用之处：无法快速定位一个接口，无法做接口迭代等问题；</li>
@@ -477,20 +476,20 @@
 <li>……等等</li>
 </ol>
 <h2 id="前端方案"><a href="#前端方案" class="headerlink" title="前端方案"></a>前端方案</h2><ol>
+<li>接口服务器必须保证稳定性，对前端、测试随时可访问！</li>
 <li>规范原则<ul>
 <li>接口返回数据即展示：前端仅做渲染逻辑处理；</li>
 <li>渲染逻辑禁止跨多个接口调用；</li>
 <li>前端关注交互、渲染逻辑，尽量避免业务逻辑处理的出现；</li>
 <li>按照REST规则制定请求/响应规范；</li>
-<li>制定错误码管理，定制细化管理一些常见错误码；</li>
+<li>制定错误信息管理，定制细化管理一些常见错误码/错误信息；</li>
 <li>使用RAP或Swagger-UI解决接口迭代、历史记录问题；</li>
 <li>制定请求方式、请求格式、响应格式；</li>
 <li>mock数据等。</li>
 </ul>
 </li>
 <li>关于REST<ul>
-<li>使用GET、POST、PUT、DELETE4个HTTP Method，而非简单的GET和POST；</li>
-<li>响应使用响应状态码来标志请求的执行结果，而非以往的status字段；</li>
+<li>响应使用响应状态码来标志请求的执行结果，而非以往的status字段？</li>
 <li>实体名称均已以复数表示，如GET /users 或 POST /users/status；</li>
 <li>URL最后不得添加斜杠符号’/‘；</li>
 </ul>
@@ -501,34 +500,18 @@
 </ul>
 </li>
 <li>关于响应数据类型<ul>
-<li>JSON格式：多数接口应当使用此格式，此时响应的Content-Type头的值必须为application/json；</li>
-<li>HTML格式：部分接口，如上传文件，由于技术的限制必须使用<code>&lt;iframe&gt;</code>元素完成，返回的响应为一个HTML片段，此实响应的Content-Type头的值必须为text/html；</li>
-<li>JSONP格式：当跨域调用API时，会需要使用JSONP接口，此时响应的Content-Type头的值必须为application/x-javascript，且请求的URL中的callback字段的值为函数名，返回响应的JSONP字段。</li>
+<li>JSON格式：多数接口应当使用此格式，此时响应的Content-Type头的值必须为application/json</li>
 </ul>
 </li>
 <li>关于编码<ul>
 <li>所有请求和响应均必须使用utf-8编码。此标准体现在请求和响应的Content-Type头的值必须配有;charset=utf-8</li>
-<li>对于前端使用JSONP的场景，则应为<code>&lt;script&gt;</code>标签指定chartset=”utf-8”</li>
 </ul>
 </li>
 <li>关于接口文档<ul>
 <li>接口的名称及简单的作用描述；</li>
 <li>接口的URL和请求时使用的HTTP Method;</li>
 <li>接口的请求格式及参数；</li>
-<li>接口可能返回的状态吗，及每个状态码下的响应类型和格式；</li>
-<li>接口的缓存设计</li>
-</ul>
-</li>
-<li>关于缓存<ul>
-<li>REST设计的一个原则为有效利用缓存，因此接口的设计必须将缓存作为一个因素，进行认真的设计并写入接口文档；</li>
-<li>所有POST、PUT和DELETE请求均不缓存，这一点有浏览器自身保证，无需额外配置；</li>
-<li>对于GET请求，必须合理地配置缓存头，标准建议使用以下方式实现缓存：<ul>
-<li>如果资源是实时变化无法缓存的，则请求时带时间戳字段，时间戳字段的参数名为_，后端应当忽略此字段。同时无缓存的GET请求，响应中应当有Cache-Control:no-cache头，且不得含有ETag和Last-Modified头，如果包含Expires头，则其值必须为一个过去的时间；</li>
-<li>如果资源带有最后修改时间（如数据库中有last_update_time列），则建议将此时间作为响应的Last-Modified头返回，前端不对该请求加时间戳访问。当可以生成Last-Modified头时，不建议同时生成ETag头；</li>
-<li>如果资源带有一个唯一的版本标识（如数据库中的rowid列），则建议将次标识值作为响应的ETag头返回，前段不对该请求添加时间戳访问。当可以生成ETag头时，不建议同时生成Last-Modified头，两者以Last-Modified头为优先。</li>
-<li>如果一个资源可以有假定的缓存时间，则通过Cache-Control: max-age={seconds}或Expires响应头进行配置。标准建议使用此类缓存时慎重考虑，在请求不是系统性能瓶颈时，不建议使用此类缓存。</li>
-</ul>
-</li>
+<li>接口可能返回的状态吗，及每个状态码下的响应类型和格式。</li>
 </ul>
 </li>
 </ol>
