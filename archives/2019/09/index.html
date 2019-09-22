@@ -43,7 +43,7 @@
     
     <title>
         
-            前后端分离后一定要做的接口规范 | 
+            归档: 2019/9 | 
         
         RationalPoet Blog --Mac
     </title>
@@ -210,7 +210,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="RationalPoet Blog --Mac">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/archives/2019/09/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="RationalPoet Blog --Mac">
@@ -225,16 +225,13 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/">
+    <meta property="og:url" content="http://yoursite.com/archives/2019/09/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="前后端分离后一定要做的接口规范 | RationalPoet Blog --Mac">
+    <meta property="og:title" content="归档: 2019/9 | RationalPoet Blog --Mac">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     
 
-    
-        <meta property="article:published_time" content="Mon Oct 15 2018 11:10:47 GMT+0800">
-        <meta property="article:modified_time" content="Wed Oct 17 2018 14:05:35 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -242,43 +239,13 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/index.html" />
+        <link rel="canonical" href="http://yoursite.com/archives/2019/09/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/index.html",
-    "headline": "前后端分离后一定要做的接口规范",
-    "datePublished": "Mon Oct 15 2018 11:10:47 GMT+0800",
-    "dateModified": "Wed Oct 17 2018 14:05:35 GMT+0800",
-    "author": {
-        "@type": "Person",
-        "name": "YoungSure",
-        "image": {
-            "@type": "ImageObject",
-            "url": "/img/plogo.jpg"
-        },
-        "description": "Hi, nice to meet you"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "RationalPoet Blog --Mac",
-        "logo": {
-            "@type":"ImageObject",
-            "url": "/img/favicon.png"
-        }
-    },
-    "keywords": "",
-    "description": "",
-}
-</script>
 
 
     
@@ -312,256 +279,93 @@
                         </button>
                     
 
-                    <!-- Post TOC -->
-
+                    <!-- Index Module -->
+<div class="material-index mdl-grid">
     
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
-            </span>
-        </a>
-    </div>
-    -->
+    <div class="locate-thumbnail-symbol"></div>
 
-
-    <!-- Left aligned menu below button -->
-    
-    
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ensp-ensp-前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">  前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ensp-ensp-实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">  实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#痛点"><span class="post-toc-number">2.</span> <span class="post-toc-text">痛点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前端方案"><span class="post-toc-number">3.</span> <span class="post-toc-text">前端方案</span></a></li></ol>
-    </ul>
+    <!-- Pin on top -->
     
 
-
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
+    <!-- Normal Post -->
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
+        
+    
 
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2019/09/22/overwrite/">overwrite</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2019/09/22/overwrite/" target="_self">阅读全文</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/img/plogo.jpg" width="44px" height="44px" alt="YoungSure's avatar">
+            </div>
+            <div>
+                <strong>YoungSure</strong>
+                <span>9月 22, 2019</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+          
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+
+    
+
+    
+        <script type="text/ls-javascript" id="thumbnail-script">
+    var randomNum;
+
+    var locatePost = $('.locate-thumbnail-symbol').next();
+    for(var i = 0; i < 10; i++) {
+        randomNum = Math.floor(Math.random() * 19 + 1);
+
+        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
+        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
+
+        locatePost = locatePost.next();
+    }
 </script>
 
-        
-    
-            <p class="article-headline-p">
-                前后端分离后一定要做的接口规范
-            </p>
-        </div>
-
-
-
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/img/plogo.jpg" width="44px" height="44px" alt="Author Avatar"/>
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>YoungSure</strong>
-        <span>10月 15, 2018</span>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-
-    <!-- Tags (bookmark) -->
-    
-
-    <!-- Share -->
-    
-        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-
-    
-
-    <!-- Share Weibo -->
-    
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=前后端分离后一定要做的接口规范&url=http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
-            <li class="mdl-menu__item">
-                分享到微博
-            </li>
-        </a>
-    
-
-    <!-- Share Twitter -->
-    
-
-    <!-- Share Facebook -->
-    
-
-    <!-- Share Google+ -->
-    
-
-    <!-- Share LinkedIn -->
-    
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/index.html&title=前后端分离后一定要做的接口规范" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 LinkedIn
-            </li>
-        </a>
-    
-
-    <!-- Share QQ -->
-    
-
-    <!-- Share Telegram -->
-    
-</ul>
-
     
 </div>
-
-                
-
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h4 id="ensp-ensp-前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。"><a href="#ensp-ensp-前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。" class="headerlink" title="&ensp;&ensp;前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。"></a>&ensp;&ensp;前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。</h4><h4 id="ensp-ensp-实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。"><a href="#ensp-ensp-实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。" class="headerlink" title="&ensp;&ensp;实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。"></a>&ensp;&ensp;实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。</h4><p><img src="/image/fontend/csmodel2.webp" alt="前后端分离的基础模型" title="前后端分离的基础模型">  </p>
-<h2 id="痛点"><a href="#痛点" class="headerlink" title="痛点"></a>痛点</h2><ol>
-<li>接口迭代问题：接口的修改记录，历史存档都存在很大的问题，有些历史遗留问题需要查找老接口才能排查问题，但是基本上要先去扒代码、看git历史、diff代码，人工脑力回忆等手段去解决；</li>
-<li>接口请求格式：存在新旧接口请求格式并存的情况，请求旧接口使用的是一种方式（请求体带参），请求新接口是另外一种方式（rest接口在url中直接传参）；</li>
-<li>接口响应错误时的错误信息：目前接口响应数据的格式基本有一个大概的模型，即：body字段存放响应数据、info字段返回响应描述、status字段存放请求状态码，当前很多情况下会发生接口响应失败，即使是不同的原因造成的接口响应失败，但status字段总是1000/99等少数错误码，而错误信息页总是”请求失败”等模糊字样，造成每次排查错误都要扒日志、查找相关接口代码，是否考虑定制化常见错误码，并做错误码管理？</li>
-<li>接口返回数据量： 有些接口返回大量无用数据，甚至数据嵌套层级较深，导致前端处理数据比较麻烦；</li>
-<li>接口要做逻辑，不能让前端做：存在很多接口只返回了一些基础数据，其业务逻辑/数据处理放在了前端进行处理，弊端多多，不利于前后端解耦、业务剥离、数据排查等问题；</li>
-<li>swagger-ui接口查找上存在一定的难用之处：无法快速定位一个接口，无法做接口迭代等问题；</li>
-<li>mock数据的可用性，现在好像不存在mock服务器（平台）提供mock数据？</li>
-<li>……等等</li>
-</ol>
-<h2 id="前端方案"><a href="#前端方案" class="headerlink" title="前端方案"></a>前端方案</h2><ol>
-<li>接口服务器必须保证稳定性，对前端、测试随时可访问！</li>
-<li>规范原则<ul>
-<li>接口返回数据即展示：前端仅做渲染逻辑处理；</li>
-<li>渲染逻辑禁止跨多个接口调用；</li>
-<li>前端关注交互、渲染逻辑，尽量避免业务逻辑处理的出现；</li>
-<li>按照REST规则制定请求/响应规范；</li>
-<li>制定错误信息管理，定制细化管理一些常见错误码/错误信息；</li>
-<li>使用RAP或Swagger-UI解决接口迭代、历史记录问题；</li>
-<li>制定请求方式、请求格式、响应格式；</li>
-<li>mock数据等。</li>
-</ul>
-</li>
-<li>关于REST<ul>
-<li>响应使用响应状态码来标志请求的执行结果，而非以往的status字段？</li>
-<li>实体名称均已以复数表示，如GET /users 或 POST /users/status；</li>
-<li>URL最后不得添加斜杠符号’/‘；</li>
-</ul>
-</li>
-<li>关于数据类型<ul>
-<li>表单编码格式：此格式为简单的a=b&amp;c=d，使用此请求格式时，请求头的Content-Type值必须为application/x-www-form-urlencoded；</li>
-<li>JSON格式：此格式为一个完整的符合JSON格式的串，使用此格式时，请求的Content-Type值必须为application/json</li>
-</ul>
-</li>
-<li>关于响应数据类型<ul>
-<li>JSON格式：多数接口应当使用此格式，此时响应的Content-Type头的值必须为application/json</li>
-</ul>
-</li>
-<li>关于编码<ul>
-<li>所有请求和响应均必须使用utf-8编码。此标准体现在请求和响应的Content-Type头的值必须配有;charset=utf-8</li>
-</ul>
-</li>
-<li>关于接口文档<ul>
-<li>接口的名称及简单的作用描述；</li>
-<li>接口的URL和请求时使用的HTTP Method;</li>
-<li>接口的请求格式及参数；</li>
-<li>接口可能返回的状态吗，及每个状态码下的响应类型和格式。</li>
-</ul>
-</li>
-</ol>
-
-        
-    
-
-    
-</div>
-
-
-                
-
-                <!-- Post Comments -->
-                
-                    
-                
-            </div>
-
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-        <a href="/2018/10/24/JavaScript中的防抖和节流/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
-
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
-
-    <!-- Next Nav -->
-    
-        <a href="/2018/10/14/浅谈前端技术的演进/" id="post_nav-older" class="next-content">
-            旧篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
-
-        </div>
-    </div>
-
 
 
                     

@@ -43,7 +43,7 @@
     
     <title>
         
-            前后端分离后一定要做的接口规范 | 
+            CSS世界-块级元素和内联元素二三事 | 
         
         RationalPoet Blog --Mac
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",CSS">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -210,7 +210,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="RationalPoet Blog --Mac">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/01/28/CSS世界-块级元素和内联元素二三事/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="RationalPoet Blog --Mac">
@@ -225,16 +225,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/">
+    <meta property="og:url" content="http://yoursite.com/2019/01/28/CSS世界-块级元素和内联元素二三事/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="前后端分离后一定要做的接口规范 | RationalPoet Blog --Mac">
+    <meta property="og:title" content="CSS世界-块级元素和内联元素二三事 | RationalPoet Blog --Mac">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="CSS"> 
 
     
-        <meta property="article:published_time" content="Mon Oct 15 2018 11:10:47 GMT+0800">
-        <meta property="article:modified_time" content="Wed Oct 17 2018 14:05:35 GMT+0800">
+        <meta property="article:published_time" content="Mon Jan 28 2019 19:12:46 GMT+0800">
+        <meta property="article:modified_time" content="Sat Feb 02 2019 10:57:45 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -242,7 +242,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2019/01/28/CSS世界-块级元素和内联元素二三事/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -254,10 +254,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/index.html",
-    "headline": "前后端分离后一定要做的接口规范",
-    "datePublished": "Mon Oct 15 2018 11:10:47 GMT+0800",
-    "dateModified": "Wed Oct 17 2018 14:05:35 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2019/01/28/CSS世界-块级元素和内联元素二三事/index.html",
+    "headline": "CSS世界-块级元素和内联元素二三事",
+    "datePublished": "Mon Jan 28 2019 19:12:46 GMT+0800",
+    "dateModified": "Sat Feb 02 2019 10:57:45 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "YoungSure",
@@ -275,7 +275,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",CSS",
     "description": "",
 }
 </script>
@@ -341,7 +341,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ensp-ensp-前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">  前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ensp-ensp-实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">  实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#痛点"><span class="post-toc-number">2.</span> <span class="post-toc-text">痛点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前端方案"><span class="post-toc-number">3.</span> <span class="post-toc-text">前端方案</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#序"><span class="post-toc-number">1.</span> <span class="post-toc-text">序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#块级元素"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">块级元素</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#为什么list-item元素会出现项目符号"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">为什么list-item元素会出现项目符号</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#标记盒子"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">标记盒子</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#外在盒子，容器盒子"><span class="post-toc-number">1.1.1.2.</span> <span class="post-toc-text">外在盒子，容器盒子</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#width和height的作用细节"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">width和height的作用细节</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#你不知道的width-auto"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">你不知道的width:auto</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#外部尺寸和流体特性"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">外部尺寸和流体特性</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#内部尺寸和流体特性"><span class="post-toc-number">1.1.2.3.</span> <span class="post-toc-text">内部尺寸和流体特性</span></a></li></ol></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -373,7 +373,7 @@
         
     
             <p class="article-headline-p">
-                前后端分离后一定要做的接口规范
+                CSS世界-块级元素和内联元素二三事
             </p>
         </div>
 
@@ -392,7 +392,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>YoungSure</strong>
-        <span>10月 15, 2018</span>
+        <span>1月 28, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -410,6 +410,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/CSS/">CSS</a>
+    </ul>
+    
 
     <!-- Share -->
     
@@ -424,7 +433,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=前后端分离后一定要做的接口规范&url=http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CSS世界-块级元素和内联元素二三事&url=http://yoursite.com/2019/01/28/CSS世界-块级元素和内联元素二三事/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -442,7 +451,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2018/10/15/前后端分离后一定要做的接口规范/index.html&title=前后端分离后一定要做的接口规范" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/01/28/CSS世界-块级元素和内联元素二三事/index.html&title=CSS世界-块级元素和内联元素二三事" target="_blank">
             <li class="mdl-menu__item">
                 分享到 LinkedIn
             </li>
@@ -464,54 +473,51 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h4 id="ensp-ensp-前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。"><a href="#ensp-ensp-前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。" class="headerlink" title="&ensp;&ensp;前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。"></a>&ensp;&ensp;前后端分离的最终目的就是降低前后端之间的代码耦合度、业务复杂度，让专业的人做专业的事：服务端专一于业务逻辑处理、数据组装；前端专注于页面布局渲染、交互功能实现，从而让前后端同学可以异步工作，解放劳动力。</h4><h4 id="ensp-ensp-实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。"><a href="#ensp-ensp-实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。" class="headerlink" title="&ensp;&ensp;实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。"></a>&ensp;&ensp;实现前后端分离的首要任务就是要设计处一套完备的、可靠的、健壮的接口规范，最大程度的协调前后端同学的协同工作，解耦工作依赖，可以使新同学快速的理解并进入工作当中，同时页能很好地维护老旧接口、交互等。</h4><p><img src="/image/fontend/csmodel2.webp" alt="前后端分离的基础模型" title="前后端分离的基础模型">  </p>
-<h2 id="痛点"><a href="#痛点" class="headerlink" title="痛点"></a>痛点</h2><ol>
-<li>接口迭代问题：接口的修改记录，历史存档都存在很大的问题，有些历史遗留问题需要查找老接口才能排查问题，但是基本上要先去扒代码、看git历史、diff代码，人工脑力回忆等手段去解决；</li>
-<li>接口请求格式：存在新旧接口请求格式并存的情况，请求旧接口使用的是一种方式（请求体带参），请求新接口是另外一种方式（rest接口在url中直接传参）；</li>
-<li>接口响应错误时的错误信息：目前接口响应数据的格式基本有一个大概的模型，即：body字段存放响应数据、info字段返回响应描述、status字段存放请求状态码，当前很多情况下会发生接口响应失败，即使是不同的原因造成的接口响应失败，但status字段总是1000/99等少数错误码，而错误信息页总是”请求失败”等模糊字样，造成每次排查错误都要扒日志、查找相关接口代码，是否考虑定制化常见错误码，并做错误码管理？</li>
-<li>接口返回数据量： 有些接口返回大量无用数据，甚至数据嵌套层级较深，导致前端处理数据比较麻烦；</li>
-<li>接口要做逻辑，不能让前端做：存在很多接口只返回了一些基础数据，其业务逻辑/数据处理放在了前端进行处理，弊端多多，不利于前后端解耦、业务剥离、数据排查等问题；</li>
-<li>swagger-ui接口查找上存在一定的难用之处：无法快速定位一个接口，无法做接口迭代等问题；</li>
-<li>mock数据的可用性，现在好像不存在mock服务器（平台）提供mock数据？</li>
-<li>……等等</li>
-</ol>
-<h2 id="前端方案"><a href="#前端方案" class="headerlink" title="前端方案"></a>前端方案</h2><ol>
-<li>接口服务器必须保证稳定性，对前端、测试随时可访问！</li>
-<li>规范原则<ul>
-<li>接口返回数据即展示：前端仅做渲染逻辑处理；</li>
-<li>渲染逻辑禁止跨多个接口调用；</li>
-<li>前端关注交互、渲染逻辑，尽量避免业务逻辑处理的出现；</li>
-<li>按照REST规则制定请求/响应规范；</li>
-<li>制定错误信息管理，定制细化管理一些常见错误码/错误信息；</li>
-<li>使用RAP或Swagger-UI解决接口迭代、历史记录问题；</li>
-<li>制定请求方式、请求格式、响应格式；</li>
-<li>mock数据等。</li>
+        <h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>CSS世界中的元素分为了块级元素（block-level element）和内联级元素（inline-level element）。其中内联级元素是在W3C在CSS规范中的叫法，其实W3C在HTML4标准中明确地将HTML元素分为了“块级元素”和“内联元素（inline element）”，虽然叫法上有些出入，但其实本质上是同一个东西。  </p>
+<p>既然CSS世界中的元素是由块级元素和内联元素组成的，那么我们就在这里先简单地逐个介绍下块级元素和内联元素，这里会分享一些大家平时很少关注的元素特性，也会对其做一个总结描述，希望大家可以更全面细致地去区分块级元素与内联元素之间的玄妙关系。  </p>
+<h3 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h3><p>常见的块级元素有<code>div</code>、<code>p</code>、<code>li</code>、<code>table</code>等元素。这是需要注意的是：并不是所有“display属性是block”的元素都是“块级元素”，其根本就不是一个概念。例如：<code>li</code>元素的”display”属性是”list-item”，<code>table</code>元素的”display”属性是”table”，但是它们是块级元素是确定无疑的。因为它们都符合块级元素的基本特征：“块级元素都是独占一行展示的，多个块级元素需要换行展示”！  </p>
+<blockquote>
+<p>这里延伸一下，由于“块级元素”的独占一行、换行展示的特性，我们经常把它和“clear”属性配合使用来清除浮动带来的影响， 如：<br><code>.clear:after {
+      content: &#39;&#39;,
+      display: block,
+      clear: both
+  }</code>  </p>
+</blockquote>
+<p>在我们平时的开发过程中，经常会想使用块级元素的一些块级特性来应用在内联元素上面，我们的做法通常是把内联元素的”display”属性重置为”block”或”table”，很少有人会想到重置为”list-item”吧，那么如果我们果真把”display”属性重置为”list-item”会怎样呢？<br>结果大家试一下便知道了，就是在元素的前面多了一个“项目符号”，虽然我们可以设置”list-style”属性的属性值为”none”来解决这个问题，但是，大家有没有想过为什么设置了”display”属性为”list-item”之后，元素符号会出现项目符号呢？  </p>
+<h4 id="为什么list-item元素会出现项目符号"><a href="#为什么list-item元素会出现项目符号" class="headerlink" title="为什么list-item元素会出现项目符号"></a>为什么list-item元素会出现项目符号</h4><p>在CSS世界伊始，其目的很单纯（CSS2及之前）的，只是单纯的做图文编排，一切布局特性都要以“更好地实现图文编排”为核心。所以，你会发现在CSS2标准中有很多属性的展示特性甚至“bug”的出现都是为了更好的实现图文编排而被“精心设计出来的”。  </p>
+<p>最初，CSS世界只存在“块级盒子”和“内联盒子”，块级盒子负责结构布局，内联盒子负责内容展示。  </p>
+<p>但是谁曾想，有些特殊的文字编排需求致使了一些特殊的需求：我在展示列表类型数据的时候，系统能不能自己给我的每项列表之前加上一个符号，让我们的读者能轻易区分开每项数据呢？于是，”list-item”便由此诞生了。</p>
+<h5 id="标记盒子"><a href="#标记盒子" class="headerlink" title="标记盒子"></a>标记盒子</h5><p>元素原来只有“块级盒子”和“内联盒子”，现在你多出来个”list-item”的”display”属性值，你应该叫个啥呢？W3C标准正色到，就叫“标记盒子”吧，专门用来放置圆点、数字等项目符号。  </p>
+<h5 id="外在盒子，容器盒子"><a href="#外在盒子，容器盒子" class="headerlink" title="外在盒子，容器盒子"></a>外在盒子，容器盒子</h5><p>有了”list-item”的先河，元素又想特殊点了：“我能不能表面是内联元素（紧挨着内联元素展示），内地里却能拥有块级元素的一些特性呢？例如设置下宽高？”。这样的呼声越来越高，最后，在结合实际使用场景和需求的前提下，W3C又创建出了“外在盒子”和“内在盒子”。  </p>
+<p>“外在盒子”负责该元素是可以一行展示，还是要换行展示也就是，”内在盒子”则负责宽高的设置以及内容展示等。  </p>
+<p>每个元素都有两个盒子，“外在盒子”和“内在盒子”。但是“内在盒子”比较晦涩，后来改名称为“容器盒子”。  </p>
+<p>所以，按照”display”属性值的不同，这个元素就有不同的“外在盒子”和“容器盒子”组成了：”block”的元素，是由外在的”块级外在盒子”和”块级容器盒子”组成的，”inline-block”是由外在的“内联外在盒子”和“块级容器盒子”组成，而”inline”则是由内外盒子都是“内联盒子”组成的。  </p>
+<h4 id="width和height的作用细节"><a href="#width和height的作用细节" class="headerlink" title="width和height的作用细节"></a>width和height的作用细节</h4><p>我们已经知道了，width和height是设置在“容器盒子”上的，那么width和height的作用细节又是怎么样的呢？下面我们就分析下width和height是如何作用在“容器盒子”上，致使元素表现出“千奇百怪、婀娜多姿”的一面的。  </p>
+<h5 id="你不知道的width-auto"><a href="#你不知道的width-auto" class="headerlink" title="你不知道的width:auto"></a>你不知道的width:auto</h5><p>width的默认值就是auto。  </p>
+<p>作为width的默认值，而我们大家又很喜欢给元素设置各种各样自己需要的宽度值，所以很少用到”auto”这个值作为width的属性值，所以也就意味着”auto”隐藏了很多我们不知道的秘密：  </p>
+<ul>
+<li>充分利用可用空间，比如<code>div</code>、<code>p</code>等块级元素,他们的默认宽度都是100%于父容器的，块级元素这种充分利用父容器宽度的特性是我们潜移默化中共同默认的一种行为，其学名叫做：fill-available，其实是块级元素在”auto”属性值下的一种特性行为；</li>
+<li>收缩性与包裹性，典型代表就是浮动、绝对定位、”inline-block”元素或”table”元素，学名叫做：shrink-to-fit,这些典型代表在没设置width属性值时，就会出现这种“收缩到合适”的特性行为；</li>
+<li>收缩到最小，最常出现在”table-layout”为”auto”的表格中。最常见的就是表格布局中的中文内容“一柱擎天”的盛况。当表格每一列空间都不足的时候，文字能断就断,但是中文是随便断的，英文单词不能断，最终中文内容很容易就出现了“一柱擎天”的现象。这种行为在规范中被称为”preferred minimum width”或”minimum content width”，后来也被称为”min-content”。<br>具体示例可以参见张鑫旭老师的demo示例地址： <a href="https://demo.cssworld.cn/3/2-1.php" target="_blank" rel="noopener">demo地址</a><br><img src="/image/CSS/block_inline/min-content.png" alt="收缩到最小的一柱擎天示例" title="一柱擎天的特性示例">  </li>
+<li>超出容器限制，除非”width”属性有相关设置，否则以上3种情况都不会玩超出父容器宽度的，但是存在一些特殊情况。例如,内容很长的连续的英文或数字,或者内联元素被设置了<code>white-space: nowrap</code>,则表现为“恰似一江春水向东流，流到断崖也绝不回头”。这种现象在规范中后来被称为”max-content”<br>具体示例可以参见张鑫旭老师的demo示例地址： <a href="https://demo.cssworld.cn/3/2-2.php" target="_blank" rel="noopener">demo地址</a><br><img src="/image/CSS/block_inline/max-content.png" alt="超出容器限制-流到断崖不回头示例" title="流到断崖不回头特性示例">  </li>
 </ul>
-</li>
-<li>关于REST<ul>
-<li>响应使用响应状态码来标志请求的执行结果，而非以往的status字段？</li>
-<li>实体名称均已以复数表示，如GET /users 或 POST /users/status；</li>
-<li>URL最后不得添加斜杠符号’/‘；</li>
-</ul>
-</li>
-<li>关于数据类型<ul>
-<li>表单编码格式：此格式为简单的a=b&amp;c=d，使用此请求格式时，请求头的Content-Type值必须为application/x-www-form-urlencoded；</li>
-<li>JSON格式：此格式为一个完整的符合JSON格式的串，使用此格式时，请求的Content-Type值必须为application/json</li>
-</ul>
-</li>
-<li>关于响应数据类型<ul>
-<li>JSON格式：多数接口应当使用此格式，此时响应的Content-Type头的值必须为application/json</li>
-</ul>
-</li>
-<li>关于编码<ul>
-<li>所有请求和响应均必须使用utf-8编码。此标准体现在请求和响应的Content-Type头的值必须配有;charset=utf-8</li>
-</ul>
-</li>
-<li>关于接口文档<ul>
-<li>接口的名称及简单的作用描述；</li>
-<li>接口的URL和请求时使用的HTTP Method;</li>
-<li>接口的请求格式及参数；</li>
-<li>接口可能返回的状态吗，及每个状态码下的响应类型和格式。</li>
+<p>以上四类场景都是我们在使用width的默认值”auto”时不同元素的宽度表现。  </p>
+<p>在CSS世界中，元素有“外在盒子”和“容器盒子”，显示也分“内部展示”和“外部展示”，同样的，尺寸也分“内部尺寸（intrinsic sizing）”和“外部尺寸(extrinsic sizing)”，内部尺寸表示尺寸由内部元素决定，而外部尺寸则表示其尺寸是由外部元素决定的。  </p>
+<p>所以，上面我们所列举的四类”auto”的默认特性，只有第一种“充分利用可用空间”是“外部尺寸”，其他三种则都属于“内部尺寸”。  </p>
+<h5 id="外部尺寸和流体特性"><a href="#外部尺寸和流体特性" class="headerlink" title="外部尺寸和流体特性"></a>外部尺寸和流体特性</h5><ol>
+<li>正常流宽度。当我们在一个容器中倒入足量的水，水一定会均匀铺满整个容器。像<code>&lt;div&gt;</code>、<code>&lt;p&gt;</code>元素，其外部尺寸特性就会像水流一样，铺满容器，这就是’block’属性外在盒子的特性。  </li>
+<li>格式化宽度。格式化宽度出现在“绝对定位模型”中，也就是出现在’position’属性为’fixed’或’absolute’的元素中。通常情况下，处于“绝对定位模型”的元素具有“包裹性”，即其外部尺寸由内容决定，但是有一种特殊情况，元素的外部尺寸是由外部决定的：<br>对于非替换元素，当left/right或top/bottom成对出现时，元素的宽度表现出来“格式化宽度”的特性，其宽度大小是相对于最近的’position’属性不为static的祖先元素来计算的。  <h5 id="内部尺寸和流体特性"><a href="#内部尺寸和流体特性" class="headerlink" title="内部尺寸和流体特性"></a>内部尺寸和流体特性</h5></li>
+<li>包裹性。即’shrink-to-fit’，包裹性除了包裹还有自适应的意思。<br>所谓“自适应”，指的是元素的尺寸由内部元素决定，但是永远小于“包含块”容器的尺寸（除非容器尺寸小于元素的“首选最小宽度”）。<br>内部尺寸的包裹性最典型的示例就是实现：“单行文字居中，多行文本左对齐”这种需求场景了，代码如下：<br><code>.box {
+ text-align: center;
+}
+.content {
+ display: inline-block;
+ text-align: left;
+}</code></li>
+<li>首选最小宽度。所谓首选最小宽度，指的是元素最适合的宽度。在CSS世界中（CSS2），图片和文字的权重要大于布局，因此制定了如下的首选最小宽度规则：  <ul>
+<li>东亚文字最小宽度为每个汉字的宽度;</li>
+<li>西方文字最小宽度由特定的连续的英文字符单元决定。并不是所有的英文字符都会组成连续单元，一般会终止于空格（普通空格）、短横线、问号以及其他非英文字符等。例如，’display:inline-block’这几个字符以连接符’-‘作为分隔符，形成了’display:inline’和’block’两个连续单元，由于连接符’-‘分隔位置在字符后面，因此，最后的宽度就是’display:inline-‘的宽度。（如果想让英文字符和中文一样，每一个字符都用最小宽度<br>单元，可以试试使用 CSS 中的 word-break:break-all）</li>
+<li>类似图片这样的替换元素，其首选最小宽度就是元素内容自身的宽度。</li>
 </ul>
 </li>
 </ol>
@@ -535,7 +541,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/10/24/JavaScript中的防抖和节流/" id="post_nav-newer" class="prev-content">
+        <a href="/2019/01/28/CSS世界-盒子尺寸二三事/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -549,7 +555,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2018/10/14/浅谈前端技术的演进/" id="post_nav-older" class="next-content">
+        <a href="/2019/01/03/vue-router的守卫们/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
