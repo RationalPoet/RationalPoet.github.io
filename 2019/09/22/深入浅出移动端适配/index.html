@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+        RationalPoet Blog --Mac
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/timg.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="RationalPoet Blog --Mac">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/09/22/深入浅出移动端适配/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="RationalPoet Blog --Mac">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/09/22/深入浅出移动端适配/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="RationalPoet Blog --Mac">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="Sun Sep 22 2019 15:35:58 GMT+0800">
+        <meta property="article:modified_time" content="Mon Sep 23 2019 17:16:42 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/09/22/深入浅出移动端适配/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/09/22/深入浅出移动端适配/index.html",
+    "headline": "",
+    "datePublished": "Sun Sep 22 2019 15:35:58 GMT+0800",
+    "dateModified": "Mon Sep 23 2019 17:16:42 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "YoungSure",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/plogo.jpg"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "RationalPoet Blog --Mac",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#导读"><span class="post-toc-number">1.</span> <span class="post-toc-text">导读</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、英寸"><span class="post-toc-number">2.</span> <span class="post-toc-text">一、英寸</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二、分辨率"><span class="post-toc-number">3.</span> <span class="post-toc-text">二、分辨率</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1-像素"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">2.1 像素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-物理像素"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2.2 物理像素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-设备独立像素"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">2.3 设备独立像素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-4-css像素（PX）"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">2.4 css像素（PX）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三、视口"><span class="post-toc-number">4.</span> <span class="post-toc-text">三、视口</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-三个viewport"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">3.1 三个viewport</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-2-关于layout-viewport的一些细节"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">3.2 关于layout viewport的一些细节</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-3-Meta-Viewport"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">3.3 Meta Viewport</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考"><span class="post-toc-number">5.</span> <span class="post-toc-text">参考</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/plogo.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>YoungSure</strong>
+        <span>9月 22, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&url=http://yoursite.com/2019/09/22/深入浅出移动端适配/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/09/22/深入浅出移动端适配/index.html&title=" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h3><p>在移动端开发过程中，我们或多或少的会遇到很多问题，如1px问题，UI完美适配各类尺寸的屏幕，高清屏图片模糊等样式适配问题；<br>也许我们现在已经有了自己的一套方案去解决上述这些问题，但是其中的原理却不一定能拎得那么灵清。<br>结合曾经风靡一时的lib-flexible框架的源码，我们可以发现实现移动端的样式适配并不是那么复杂，但是一旦深究却发现很多问题都模棱两可、模糊不清，究其原因，其实质是因为移动端适配涉及到很多的概念、影响因素，以及这些概念和影响因素之间的相互影响及作用造成的连锁反应。那么，你真的能分清这些概念的真正含义吗？<br>本文就移动端适配方案探索过程中，遇到的一些常见概念出发，深入探究移动端适配各种问题的解决方案和实现原理。  </p>
+<h3 id="一、英寸"><a href="#一、英寸" class="headerlink" title="一、英寸"></a>一、英寸</h3><p>我们一般用英寸（inch）这个物理单位来描述屏幕的物理大小，如电脑显示器的17英寸、手机显示的6.3英寸等。<br>需要注意的是，这个尺寸指的是屏幕对角线的长度<br><img src="https://user-gold-cdn.xitu.io/2019/5/17/16ac3a65a02a95cd?imageslim" alt="尺寸示意图"><br>其中，英寸和厘米的换算单位是：1英寸 = 2.54厘米  </p>
+<h3 id="二、分辨率"><a href="#二、分辨率" class="headerlink" title="二、分辨率"></a>二、分辨率</h3><p>分辨率通常分为显示分辨率和图像分辨率  </p>
+<ol>
+<li>显示分辨率（屏幕分辨率）是屏幕图像的精密度，是指显示器所能显示的像素有多少</li>
+<li>图片分辨率则是单位英寸内所包含的像素点数。<br>ppi（像素每英寸）和dpi（点每英寸）是我们最常用的用来描述分辨率的两种单位；其实ppi和dpi经常都会出现混用现象。但是他们所用的领域也存在区别。从技术角度说，“像素”只存在于电脑显示领域，而“点”只出现于打印或印刷领域。<br>我们这里来主要聊一下电脑显示领域的“像素”。<h4 id="2-1-像素"><a href="#2-1-像素" class="headerlink" title="2.1 像素"></a>2.1 像素</h4>像素，即一个小方块，它具有位置和颜色两个属性<br>电子屏幕（手机、电脑）就是由多个具有特定位置和颜色的方块拼接而成。<br><img src="https://user-gold-cdn.xitu.io/2019/5/17/16ac3a659cbe401c?imageslim" alt=""><br>图中的图片是经过放大后的图片，其中每一个小方块就是我们说的像素<h4 id="2-2-物理像素"><a href="#2-2-物理像素" class="headerlink" title="2.2 物理像素"></a>2.2 物理像素</h4></li>
+<li>物理像素等同于设备像素（dp:device pixel），顾名思义，显示屏是由一个个物理像素点组成的，通过控制每个像素点的颜色使屏幕显示出不同的图像，屏幕从出厂那天起，它上面的物理像素点就固定不变了，单位pt</li>
+<li>其中，我们通常说的显示器分辨率，其实是指桌面设定的分辨率，而不是显示器的物理分辨率  <h4 id="2-3-设备独立像素"><a href="#2-3-设备独立像素" class="headerlink" title="2.3 设备独立像素"></a>2.3 设备独立像素</h4>在智能机出现伊始，移动设备的屏幕像素密度都很低，比如iPhone3，它的分辨率是320x480，在iPhone3的屏幕上，我们看到的内容都是“真实”的，1px = 1px，iPhone3屏幕上最多只能展示一个320px宽的元素。但如果仔细观察，你会在iPhone3的屏幕上发现有很多细小的发光点，也即是大家常说的“颗粒感”，这一颗一颗的发光点就是我们上面说到的真实的像素物理单元，也就是物理像素。<br>随着技术的快速发展，屏幕的变化也日新月异。很快，更高分辨率的屏幕诞生了，乔布斯在2010年6月8日发布了iPhone4，它的分辨率是640*940，正好是iPhone3的两倍。然而iPhone4和iPhone3的尺寸是一样的，都是3.5英寸，那么在物理尺寸不变的情况下，iPhone4是怎么做到把两倍的分辨率使用在这块3.5英寸的屏幕上的呢？<br><img src="https://user-gold-cdn.xitu.io/2019/5/17/16ac3a6576e564d5?imageslim" alt="iPhone3和iPhone4对比"><br>理论上来讲，在白色手机上相同大小的图片和文字，在黑色手机上会被缩放一倍，因为它的分辨率提高了一倍。这样，岂不是后面出现更高分辨率的手机，页面元素会变得越来越小吗？<br>然而，事实并不是这样的，我们现在使用的智能手机，不管分辨率多高，他们所展示的界面比例都是基本类似的。乔布斯在iPhone4的发布会上首次提出了Retina Display(视网膜屏幕)的概念，它正是解决了上面的问题，这也使它成为一款跨时代的手机。</li>
+</ol>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/17/16ac3a658fe8b6ff?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=""><br>在iPhone4使用的视网膜屏幕中，把2x2个像素当1个像素使用，这样让屏幕看起来更精致，但是元素的大小却不会改变。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/17/16ac3a65a53a177e?imageslim" alt=""><br>如果黑色手机使用了视网膜屏幕的技术，那么显示结果应该是下面的情况，比如列表的宽度为300个像素，那么在一条水平线上，白色手机会用300个物理像素去渲染它，而黑色手机实际上会用600个物理像素去渲染它。<br>我们必须用一种单位来同时告诉不同分辨率的手机，它们在界面上显示元素的大小是多少，这个单位就是设备独立像素(Device Independent Pixels)简称DIP或DP。上面我们说，列表的宽度为300个像素，实际上我们可以说：列表的宽度为300个设备独立像素。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/17/16ac3a6609e7303b?imageslim" alt=""><br>打开chrome的开发者工具，我们可以模拟各个手机型号的显示情况，每种型号上面会显示一个尺寸，比如iPhone X显示的尺寸是375x812，实际iPhone X的分辨率会比这高很多，这里显示的就是设备独立像素  </p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/17/16ac3a664842c93c?imageslim" alt="">  </p>
+<h4 id="2-4-css像素（PX）"><a href="#2-4-css像素（PX）" class="headerlink" title="2.4 css像素（PX）"></a>2.4 css像素（PX）</h4><blockquote>
+<p>css像素是一种虚拟像素，可以理解为“直觉”像素，CSS和JS使用的抽象单位，浏览器内的一切长度都是以CSS像素为单位的，CSS像素的单位是px。  </p>
+</blockquote>
+<p>在CSS规范中，长度单位可以分为两类，绝对(absolute)单位以及相对(relative)单位。px是一个相对单位，相对的是设备像素(device pixel)。</p>
+<ol>
+<li>在同样一个设备上，每1个CSS像素所代表的物理像素是可以变化的(即CSS像素的第一方面的相对性); </li>
+<li>在不同的设备之间，每1个CSS像素所代表的物理像素是可以变化的(即CSS像素的第二方面的相对性);  </li>
+</ol>
+<p>在移动端浏览器中以及某些桌面浏览器中，window对象有一个devicePixelRatio(设备像素比)属性，它的官方的定义为：设备物理像素和设备独立像素的比例，也就是 dpr = dp / dips。  </p>
+<ol>
+<li>dp(device pixels)：设备物理像素；  </li>
+<li>dips(device-independent pixels)：设备独立像素，dips = css像素 / scale（缩放比例）  </li>
+</ol>
+<p>在没有缩放的情况下，1个css像素等同于一个设备独立像素。</p>
+<p>CSS像素在视觉上是很容易改变大小的，比如缩放浏览器页面，就是改变的CSS像素，当放大一倍，那么一个CSS像素在横向或者纵向上会覆盖两个设备独立像素。例如宽度100px像素，当页面放大一倍，它会在横向上由原本占据100个设备独立像素，变成占据200个设备独立像素；如果缩小，则恰好相反，只能占据50个设备独立像素。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/9/23/16d5c032cf0af85b?w=696&amp;h=350&amp;f=png&amp;s=3855" alt=""><br>图示说明：  </p>
+<ol>
+<li>设备像素(深蓝色背景)、CSS像素(半透明背景)。</li>
+<li>左图表示当用户进行缩小操作时，一个设备像素覆盖了多个CSS像素。</li>
+<li>右图表示当用户进行放大操作时，一个CSS像素覆盖了多个设备像素。  </li>
+</ol>
+<p>无论CSS像素是缩小还是放大，它是像素数目是不变的，比如100px，无论缩放，它依然是100px，只不过它占据的设备独立像素发生了变化（体积发生了变化，视觉大小上发生了变化而已）。  </p>
+<h3 id="三、视口"><a href="#三、视口" class="headerlink" title="三、视口"></a>三、视口</h3><blockquote>
+<p>Viewport翻译成中文可以叫“视窗”或者是“视口”，它表示的是用户网页的可视范围（指页面能够被浏览的范围）  </p>
+</blockquote>
+<p>在移动设备上进行网页的重构或开发，首先得搞明白的就是移动设备上的viewport了，只有明白了viewport的概念以及弄清楚了跟viewport有关的meta标签的使用，才能更好地让我们的网页适配或响应各种不同分辨率的移动设备。  </p>
+<h4 id="3-1-三个viewport"><a href="#3-1-三个viewport" class="headerlink" title="3.1 三个viewport"></a>3.1 三个viewport</h4><p>ppk大神对于移动设备上的viewport有着非常多的研究（<a href="https://www.quirksmode.org/mobile/viewports.html" target="_blank" rel="noopener">A tale of two viewports — part one</a>，<a href="https://www.quirksmode.org/mobile/viewports2.html" target="_blank" rel="noopener">A tale of two viewports — part two</a>，<a href="https://www.quirksmode.org/mobile/metaviewport/" target="_blank" rel="noopener">Meta viewport</a>），ppk认为，移动设备上有三个viewport。  </p>
+<p>首先，移动设备上的浏览器认为自己必须能让所有的网站都正常显示，即使是那些不是为移动设备设计的网站。<br>但如果以浏览器的可视区域作为viewport的话，因为移动设备的屏幕都不是很宽，所以那些为桌面浏览器设计的网站放到移动设备上显示时，必然会因为移动设备的viewport太窄，而挤作一团，甚至布局什么的都会乱掉。  </p>
+<p>如果把移动设备上浏览器的可视区域设为viewport的话，某些网站就会因为viewport太窄而显示错乱，所以这些浏览器就决定默认情况下把viewport设为一个较宽的值，比如980px，这样的话即使是那些为桌面设计的网站也能在移动浏览器上正常显示了。ppk把这个浏览器默认的viewport叫做layout viewport(布局视口)。<br><strong>layout viewport的宽度可以通过 document.documentElement.clientWidth 来获取。</strong></p>
+<p>然而，layout viewport 的宽度是大于浏览器可视区域的宽度的，所以我们还需要一个viewport来代表 浏览器可视区域的大小，ppk把这个viewport叫做 visual viewport(视觉视口)。<br><strong>visual viewport的宽度可以通过window.innerWidth 来获取。</strong>  </p>
+<p>George Cummins在stack overflow上解释了基本的概念：  </p>
+<blockquote>
+<p>将layout viewport想象为一个不会改变大小或形状的大图像。现在想象你有一个较小的框架，通过它你可以看到这个大图片。小框架由不透明的材料构成，通过它你只能看到大图像的一部分，这一部分就叫做 visual viewport .你可以拿着这个框架和图像拉开一定的距离(zoom out)看到整个图像，你也可以让自己离图像更近(zoom in)看到其中的一部分。你也可以旋转这个框架的方向，但是这个图片(layout viewport)的大小和形状永远不会改变。</p>
+</blockquote>
+<p><strong>ps: visual viewport的宽度指的是浏览器可视区域的宽度</strong>  </p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/9/23/16d5c3b9e32186b7?w=497&amp;h=378&amp;f=png&amp;s=307912" alt="">  </p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/9/23/16d5c3bfcf3cf1d0?w=500&amp;h=377&amp;f=png&amp;s=306067" alt=""><br>现在我们已经有两个viewport了：layout viewport 和 visual viewport。</p>
+<p>但浏览器觉得还不够，因为现在越来越多的网站都会为移动设备进行单独的设计，所以必须还要有一个能完美适配移动设备的viewport。<br>所谓的完美适配指的是: </p>
+<ol>
+<li>首先不需要用户缩放和横向滚动条就能正常的查看网站的所有内容；</li>
+<li>显示的文字的大小是合适，比如一段14px大小的文字，不会因为在一个高密度像素的屏幕里显示得太小而无法看清，理想的情况是这段14px的文字无论是在何种密度屏幕，何种分辨率下，显示出来的大小都是差不多的。当然，不只是文字，其他元素像图片什么的也是这个道理。  </li>
+</ol>
+<p>ppk把这个viewport叫做 ideal viewport(理想视口)，也就是第三个viewport——移动设备的理想viewport。<br><strong>ideal viewport 可通过window.screen.width获取。</strong>   </p>
+<blockquote>
+<p>ideal viewport 并没有一个固定的尺寸，不同的设备拥有有不同的 ideal viewport。 </p>
+</blockquote>
+<p><img src="https://user-gold-cdn.xitu.io/2019/9/23/16d5cc44fa0d7d55?w=270&amp;h=212&amp;f=png&amp;s=22222" alt=""><br>只要在css中把某一元素的宽度设为ideal viewport的宽度(单位用px)，那么这个元素的宽度就是设备屏幕的宽度了，也就是宽度为100%的效果  </p>
+<p>deal viewport 的意义在于，无论在何种分辨率的屏幕下，那些针对ideal viewport 而设计的网站，不需要用户手动缩放，也不需要出现横向滚动条，都可以完美的呈现给用户。  </p>
+<h4 id="3-2-关于layout-viewport的一些细节"><a href="#3-2-关于layout-viewport的一些细节" class="headerlink" title="3.2 关于layout viewport的一些细节"></a>3.2 关于layout viewport的一些细节</h4><ol>
+<li>css布局，尤其是百分比宽度，是相对于layout viewport的宽度计算的（即页面最顶级元素html的自适应宽度（或100%）的参考系就是layout viewport的宽度），它要比visual viewport宽得多  </li>
+<li>layout viewport和visual viewport都是由css像素测量的，但是visual viewport的尺寸会随着缩放变化（如果你进行放大操作，那么屏幕上将展示更少的css像素），而layout viewport的尺寸将保持不变。（否则，你的页面将会持续地按百分比回流和重新计算，这是我们不想看到的）</li>
+<li>大部分手机浏览器会初始展示整个页面在一屏之内（完全的缩小模式下），也就意味着这些浏览器会默认使用layout viewport的尺寸，这样它就可以在完全缩小的模式下完全覆盖屏幕，因此layout viewport和visual viewport的尺寸相同<br><img src="https://user-gold-cdn.xitu.io/2019/9/23/16d5cde5ef93df93?w=229&amp;h=402&amp;f=jpeg&amp;s=38016" alt=""></li>
+<li>layout viewport的宽度和高度等于在最大缩小模式下的屏幕上显示内容的宽度和高度，当用户放大缩小时，layout viewport的尺寸保持不变<br><img src="https://user-gold-cdn.xitu.io/2019/9/23/16d5ce37eb22aa10?w=380&amp;h=519&amp;f=jpeg&amp;s=64775" alt="">  </li>
+<li>安卓的webkit内核和IE的最小视口大小是320px，因此当你给layout viewport设置小于320的值时，浏览器会自动重置为ideal viewport的宽度 </li>
+<li>layout viewport的最大宽度是10000px</li>
+<li>layout viewport的最小宽度大约为ideal viewport的宽度的十分之一</li>
+</ol>
+<h4 id="3-3-Meta-Viewport"><a href="#3-3-Meta-Viewport" class="headerlink" title="3.3 Meta Viewport"></a>3.3 Meta Viewport</h4><figure class="highlight plain"><figcaption><span>元素表示那些不能由其它HTML元相关元素之一表示的任何元数据信息，它可以告诉浏览器如何解析页面,</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">我们可以借助```&lt;meta&gt;```元素的viewport来帮助我们设置视口、缩放等，从而让移动端得到更好的展示效果。  </span><br><span class="line"></span><br><span class="line">```&lt;meta name=&quot;viewport&quot;&gt;``` 允许开发者去设置layout viewport的宽度（正整数或关键词device-width）  </span><br><span class="line">```&lt;meta name=&quot;viewport&quot;&gt;``` 使用如下语法格式：  </span><br><span class="line">```&lt;meta name=&quot;viewport&quot; content=&quot;name=value,name=value&quot;&gt;```  </span><br><span class="line"></span><br><span class="line">##### 3.3.1 指令</span><br><span class="line"></span><br><span class="line">每一对键值对都是一个指令，Meta Viewport共有6组指令：   </span><br><span class="line">1. width，设置layout viewport的宽度，为一个正整数，或关键词&apos;device-width&apos;</span><br><span class="line">2. initial-scale，设置页面的初始缩放值，为一个大于0的小数</span><br><span class="line">3. minimum-scale，允许用户的最小缩放值，为一个大于0的小数</span><br><span class="line">4. maximum-scale，允许用户的最大缩放值，为一个大于0的小数</span><br><span class="line">5. heght，设置layout viewport的高度，有这个属性，但是好像并没有人支持</span><br><span class="line">6. user-scalable，是否允许用户进行缩放，值为&apos;yes&apos;或&apos;no&apos;  </span><br><span class="line"></span><br><span class="line">这些属性可以同时使用，也可以单独使用或混合使用，多个属性同时使用时用逗号隔开就行了。  </span><br><span class="line"></span><br><span class="line">##### 3.3.2 和ideal viewport不得不说的故事</span><br><span class="line"></span><br><span class="line">layout viewport可以设置成为ideal viewport，通过设置```width=device-width``` 这组指令就可以了（但要注意的是，在iphone和ipad上，无论是竖屏还是横屏，&apos;device-width&apos;都是竖屏时ideal viewport的宽度。）</span><br><span class="line"></span><br><span class="line">```initial-scale=1``` 同样也可以把当前的layout viewport变为ideal viewport，这是为什么呢？</span><br><span class="line"></span><br><span class="line">要想清楚这件事情，首先你得弄明白这个缩放是相对于什么来缩放的，因为这里的缩放值是1，也就是没缩放，但却达到了 ideal viewport 的效果，所以，那答案就只有一个了，**缩放是相对于 ideal viewport来进行缩放的**，当对ideal viewport进行100%的缩放，也就是缩放值为1的时候，不就得到了 ideal viewport吗？事实证明，的确是这样的：</span><br><span class="line"></span><br><span class="line">![](https://user-gold-cdn.xitu.io/2019/9/23/16d5d02481ca2fe9?w=880&amp;h=154&amp;f=png&amp;s=16392)  </span><br><span class="line">测试结果表明 initial-scale=1 也能把当前的viewport宽度变成 ideal viewport 的宽度，但这次轮到了windows phone 上的IE 无论是竖屏还是横屏都把宽度设为竖屏时ideal viewport的宽度。  </span><br><span class="line"></span><br><span class="line">**但如果 width 和 initial-scale=1 同时出现，并且还出现了冲突呢？**  </span><br><span class="line"></span><br><span class="line">比如：```&lt;meta name=&quot;viewport&quot; content=&quot;width=400, initial-scale=1&quot;&gt;```  </span><br><span class="line"></span><br><span class="line">width=400表示把当前viewport的宽度设为400px，initial-scale=1则表示把当前viewport的宽度设为ideal viewport的宽度，那么浏览器到底该服从哪个命令呢？</span><br><span class="line"></span><br><span class="line">**浏览器会取它们两个中较大的那个值！**</span><br><span class="line"></span><br><span class="line">例如，当width=400，ideal viewport的宽度为320时，取的是400；当width=400， ideal viewport的宽度为480时，取的是ideal viewport的宽度。</span><br><span class="line"></span><br><span class="line">最后，总结一下，要把当前的viewport宽度设为ideal viewport的宽度，既可以设置 width=device-width，也可以设置 initial-scale=1，但这两者各有一个小缺陷，就是iphone、ipad以及IE 会横竖屏不分，通通以竖屏的ideal viewport宽度为准。所以，最完美的写法应该是，两者都写上去，这样就 initial-scale=1 解决了 iphone、ipad的毛病，width=device-width则解决了IE的毛病。  </span><br><span class="line"></span><br><span class="line">##### 3.3.3 关于缩放以及initial-scale的默认值</span><br><span class="line"></span><br><span class="line">前面已经提到过，缩放是相对于ideal viewport来缩放的，缩放值越大，当前viewport的宽度就会越小，反之亦然。  </span><br><span class="line"></span><br><span class="line">例如在iphone中，ideal viewport的宽度是320px，如果我们设置 initial-scale=2 ，此时viewport的宽度会变为只有160px了，这也好理解，放大了一倍嘛，就是原来1px的东西变成2px了，但是1px变为2px并不是把原来的320px变为640px了，而是在实际宽度不变的情况下，1px变得跟原来的2px的长度一样了，所以放大2倍后原来需要320px才能填满的宽度现在只需要160px就做到了。因此，我们可以得出一个公式：</span><br><span class="line"></span><br><span class="line">**visual viewport宽度 = ideal viewport宽度 / 当前缩放值**</span><br><span class="line"></span><br><span class="line">**当前缩放值 = ideal viewport宽度 / visual viewport宽度**  </span><br><span class="line"></span><br><span class="line">现在再来说下initial-scale的默认值问题，就是不写这个属性的时候，它的默认值会是多少呢？  </span><br><span class="line"></span><br><span class="line">**很显然不会是1**，因为当 initial-scale = 1 时，当前的layout viewport宽度会被设为 ideal viewport的宽度，但前面说了，各浏览器默认的 layout viewport宽度一般都是980，1024，800等等这些值，没有一开始就是 ideal viewport的宽度的，所以 initial-scale的默认值肯定不是1。安卓设备上的initial-scale默认值好像没有方法能够得到，或者就是干脆它就没有默认值，一定要你显示的写出来这个东西才会起作用，我们不管它了，这里我们重点说一下iphone和ipad上的initial-scale默认值。  </span><br><span class="line"></span><br><span class="line">根据测试，我们可以在iphone和ipad上得到一个结论:</span><br><span class="line"></span><br><span class="line">**在iphone和ipad上，无论你给viewport设的宽的是多少，如果没有指定默认的缩放值，则iphone和ipad会自动计算这个缩放值，以达到当前页面不会出现横向滚动条(或者说viewport的宽度就是屏幕的宽度)的目的。**  </span><br><span class="line"></span><br><span class="line">![](https://user-gold-cdn.xitu.io/2019/9/23/16d5d0f6bb6d1ce5?w=512&amp;h=768&amp;f=png&amp;s=47783)</span><br><span class="line"></span><br><span class="line">![](https://user-gold-cdn.xitu.io/2019/9/23/16d5d0f52213ef98?w=512&amp;h=768&amp;f=png&amp;s=49789)</span><br><span class="line"></span><br><span class="line">![](https://user-gold-cdn.xitu.io/2019/9/23/16d5d0feb29d25c8?w=512&amp;h=768&amp;f=png&amp;s=53482)  </span><br><span class="line"></span><br><span class="line">#### 3.4 视口小结  </span><br><span class="line"></span><br><span class="line">首先如果不设置meta viewport标签，那么移动设备上浏览器默认的宽度值为800px，980px，1024px等这些，总之是大于屏幕宽度的。这里的宽度所用的单位px都是指css中的px，它跟代表实际屏幕物理像素的px不是一回事。</span><br><span class="line"></span><br><span class="line">第二、每个移动设备浏览器中都有一个理想的宽度，这个理想的宽度是指css中的宽度，跟设备的物理宽度没有关系，在css中，这个宽度就相当于100%的所代表的那个宽度。我们可以用meta标签把viewport的宽度设为那个理想的宽度，如果不知道这个设备的理想宽度是多少，那么用device-width这个特殊值就行了，同时initial-scale=1也有把viewport的宽度设为理想宽度的作用。所以，我们可以使用 ```&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;``` 来得到一个理想的viewport（也就是前面说的ideal viewport）。  </span><br><span class="line"></span><br><span class="line">### 四、移动端适配</span><br><span class="line"></span><br><span class="line">尽管我们可以使用设备独立像素来保证各个设备在不同手机上显示的效果类似，但这并不能保证它们显示完全一致，我们需要一种方案来让设计稿得到更完美的适配  </span><br><span class="line"></span><br><span class="line">#### 4.1 flexible方案  </span><br><span class="line">`flexible`方案是阿里早期开源的一个移动端适配解决方案，引用`flexible`后，我们在页面上统一使用`rem`来布局。  </span><br><span class="line"></span><br><span class="line">它的核心代码非常简单：</span><br></pre></td></tr></table></figure>
+<p>// set 1rem = viewWidth / 10<br>function setRemUnit () {<br>    var rem = docEl.clientWidth / 10<br>    docEl.style.fontSize = rem + ‘px’<br>}<br>setRemUnit();<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">上面的代码中，将html节点的`font-size`设置为页面`clientWidth`(布局视口)的1/10，即`1rem`就等于页面布局视口的`1/10`，这就意味着我们后面使用的`rem`都是按照页面比例来计算的。 </span><br><span class="line"></span><br><span class="line">`rem` 是相对于`html`节点的`font-size`来做计算的。</span><br><span class="line"></span><br><span class="line">我们通过设置`document.documentElement.style.fontSize`就可以统一整个页面的布局标准。  </span><br><span class="line"></span><br><span class="line">以iPhone6为例：布局视口为`375px`，则`1rem = 37.5px`，这时UI给定一个元素的宽为75px（设备独立像素），我们只需要将它设置为`75 / 37.5 = 2rem`。</span><br><span class="line">当然，每个布局都要计算非常繁琐，我们可以借助PostCSS的px2rem插件来帮助我们完成这个过程。</span><br><span class="line"></span><br><span class="line">&gt; 由于viewport单位得到众多浏览器的兼容，上面这种方案现在已经被官方弃用  </span><br><span class="line"></span><br><span class="line">#### 4.2 vh、vw方案 </span><br><span class="line"></span><br><span class="line">`vh、vw`方案即将视觉视口宽度 `window.innerWidth`和视觉视口高度 `window.innerHeight` 等分为 100 份  </span><br><span class="line">- `vw(Viewport&apos;s width)`：`1vw`等于视觉视口的1%</span><br><span class="line">- `vh(Viewport&apos;s height)` :`1vh` 为视觉视口高度的1%</span><br><span class="line">- `vmin` : `vw` 和 `vh` 中的较小值</span><br><span class="line">- `vmax` : 选取 `vw` 和 `vh` 中的最大值  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">![](https://user-gold-cdn.xitu.io/2019/5/17/16ac3a66a99430fc?imageslim)  </span><br><span class="line"></span><br><span class="line">如果视觉视口为`375px`，那么`1vw = 3.75px`，这时UI给定一个元素的宽为`75px`（设备独立像素），我们只需要将它设置为`75 / 3.75 = 20vw`。  </span><br><span class="line"></span><br><span class="line">这里的比例关系我们也不用自己换算，我们可以使用PostCSS的 `postcss-px-to-viewport` 插件帮我们完成这个过程。  </span><br><span class="line">**写代码时，我们只需要根据UI给的设计图写px单位即可。**</span><br><span class="line"></span><br><span class="line">当然，没有一种方案是十全十美的，vw同样有一定的缺陷：</span><br><span class="line"></span><br><span class="line">- px转换成vw不一定能完全整除，因此有一定的像素差;</span><br><span class="line">- 当容器使用vw，margin采用px时，很容易造成整体宽度超过100vw，从而影响布局效果。当然我们也是可以避免的，例如使用padding代替margin，结合calc()函数使用等等...  </span><br><span class="line"></span><br><span class="line">### 五、安全区域</span><br><span class="line"></span><br><span class="line">在iPhoneX发布后，许多厂商相继推出了具有边缘屏幕的手机。</span><br><span class="line"></span><br><span class="line">![](https://user-gold-cdn.xitu.io/2019/5/17/16ac3a66cca9bb1c?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)</span><br><span class="line"></span><br><span class="line">这些手机和普通手机在外观上无外乎做了三个改动：圆角（corners）、刘海（sensor housing）和小黑条（Home Indicator）。为了适配这些手机，安全区域这个概念变诞生了：安全区域就是一个不受上面三个效果的可视窗口范围。</span><br><span class="line">为了保证页面的显示效果，我们必须把页面限制在安全范围内，但是不影响整体效果</span><br><span class="line"></span><br><span class="line">#### 5.1 viewport-fit </span><br><span class="line"></span><br><span class="line">`viewport-fit`是专门为了适配iPhoneX而诞生的一个属性，它用于限制网页如何在安全区域内进行展示。</span><br><span class="line"></span><br><span class="line">![](https://user-gold-cdn.xitu.io/2019/5/17/16ac3a66dca102ac?imageslim)</span><br><span class="line"></span><br><span class="line">`contain`：可视窗口完全包含网页内容  </span><br><span class="line"></span><br><span class="line">`cover`：网页内容完全覆盖可视窗口  </span><br><span class="line"></span><br><span class="line">默认情况下或者设置为`auto`和`contain`效果相同。  </span><br><span class="line"></span><br><span class="line">#### 5.2 env、constant</span><br><span class="line"></span><br><span class="line">![](https://user-gold-cdn.xitu.io/2019/5/17/16ac3a66e9dcf70d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)  </span><br><span class="line"></span><br><span class="line">我们需要将顶部和底部合理的摆放在安全区域内，iOS11新增了两个CSS函数env、constant，用于设定安全区域与边界的距离。</span><br><span class="line">函数内部可以是四个常量：</span><br><span class="line"></span><br><span class="line">- `safe-area-inset-left`：安全区域距离左边边界距离</span><br><span class="line">- `safe-area-inset-right`：安全区域距离右边边界距离</span><br><span class="line">- `safe-area-inset-top`：安全区域距离顶部边界距离</span><br><span class="line">- `safe-area-inset-bottom`：安全区域距离底部边界距离</span><br><span class="line"></span><br><span class="line">注意：我们必须指定`viweport-fit`后才能使用这两个函数：</span><br></pre></td></tr></table></figure></p>
+<p><meta name="viewport" content="viewport-fit=cover"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`constant`在`iOS &lt; 11.2`的版本中生效，`env`在`iOS &gt;= 11.2`的版本中生效，这意味着我们往往要同时设置他们，将页面限制在安全区域内：</span><br></pre></td></tr></table></figure></p>
+<p>body {<br>  padding-bottom: constant(safe-area-inset-bottom);<br>  padding-bottom: env(safe-area-inset-bottom);<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 六、常见问题  </span><br><span class="line"></span><br><span class="line">文章开头，我们提到过一些在移动端开发过程中常见的一些问题，如1px问题，UI完美适配各类尺寸的屏幕，高清屏图片模糊等样式适配问题。</span><br><span class="line"></span><br><span class="line">关于“UI完美适配各类尺寸的屏幕”，我们可以使用`lib-flexible`或者`vw、vh`的方案去解决。</span><br><span class="line"></span><br><span class="line">我们在这里主要讲解下“1px问题”和“高清屏图片展示模糊”的问题。</span><br><span class="line"></span><br><span class="line">#### 6.1 1px问题</span><br><span class="line"></span><br><span class="line">为了适配各种屏幕，我们写代码时一般使用设备独立像素来对页面进行布局。</span><br><span class="line"></span><br><span class="line">而在设备像素比大于1的屏幕上，我们写的1px实际上是被多个物理像素渲染，这就会出现1px在有些屏幕上看起来很粗的现象。</span><br><span class="line"></span><br><span class="line">解决方案： </span><br><span class="line"></span><br><span class="line">1. 媒体查询利用设备像素比缩放，设置小数像素；</span><br><span class="line"></span><br><span class="line">&gt; 优点：简单，好理解  </span><br><span class="line">缺点：兼容性差，目前之余IOS8+才支持，在IOS7及其以下、安卓系统都是显示0px。</span><br><span class="line"></span><br><span class="line">- IOS8+下已经支持带小数的px值，media query 对应 devicePixelRatio 有个查询值 -webkit-min-device-pixel-ratio；</span><br></pre></td></tr></table></figure></p>
+<p>.border { border: 1px solid #999 }<br>@media screen and (-webkit-min-device-pixel-ratio: 2) {<br>    .border { border: 0.5px solid #999 }<br>}<br>@media screen and (-webkit-min-device-pixel-ratio: 3) {<br>    .border { border: 0.333333px solid #999 }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2. `border-image`方案</span><br><span class="line"></span><br><span class="line">&gt; 缺点：需要制作图片，圆角可能出现模糊</span><br></pre></td></tr></table></figure></p>
+<p>.border-image-1px {<br>    border-width: 1px 0px;<br>    -webkit-border-image: url(“border.png”) 2 0 stretch;<br>    border-image: url(“border.png”) 2 0 stretch;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- `border-width`：指定边框的宽度，可以设定四个值，分别为上右下左 `border-width: top right bottom left`;</span><br><span class="line">- `border-image`：该例意为：距离图片上方`2px`（属性值上没有单位）裁剪边框图片作为上边框，下方`2px`裁剪作为下边框。距离左右0像素裁剪图片即没有边框，以拉伸方式展示。</span><br><span class="line">3. `background-image`方案</span><br></pre></td></tr></table></figure></p>
+<p>.border_1px{<br>        @media only screen and (-webkit-min-device-pixel-ratio:2){<br>            .border_1px{<br>                background: url(../img/1pxline.png) repeat-x left bottom;<br>                background-size: 100% 1px;<br>            }<br>        }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;  缺点：需要制作图片，圆角可能出现模糊  </span><br><span class="line"></span><br><span class="line">4. `box-shadow`方案  </span><br><span class="line">利用阴影也可以实现，优点是没有圆角问题，缺点是颜色不好控制</span><br></pre></td></tr></table></figure></p>
+<p>div {<br>    -webkit-box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.5);<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- `box-shadow`属性的用法：`box-shadow: h-shadow v-shadow [blur] [spread] [color] [inset]`  </span><br><span class="line">- 参数分别表示: 水平阴影位置，垂直阴影位置，模糊距离， 阴影尺寸，阴影颜色，将外部阴影改为内部阴影，后四个可选；</span><br><span class="line">- 该例中为何将阴影尺寸设置为负数？设置成-1px 是为了让阴影尺寸稍小于div元素尺寸，这样左右两边的阴影就不会暴露出来，实现只有底部一边有阴影的效果。从而实现分割线效果（单边边框）。</span><br><span class="line">5. `viewport` + `rem`   </span><br><span class="line"></span><br><span class="line">&gt; 通过设置缩放，让CSS像素等于真正的物理像素。   </span><br><span class="line">例如：当设备像素比为3时，我们将页面缩放1/3倍，这时1px等于一个真正的屏幕像素。</span><br></pre></td></tr></table></figure></p>
+<p>const scale = 1 / window.devicePixelRatio;<br>    const viewport = document.querySelector(‘meta[name=”viewport”]’);<br>    if (!viewport) {<br>        viewport = document.createElement(‘meta’);<br>        viewport.setAttribute(‘name’, ‘viewport’);<br>        window.document.head.appendChild(viewport);<br>    }<br>    viewport.setAttribute(‘content’, ‘width=device-width,user-scalable=no,initial-scale=’ + scale + ‘,maximum-scale=’ + scale + ‘,minimum-scale=’ + scale);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**实际上，上面这种方案是早先`flexible`采用的方案。**  </span><br><span class="line"></span><br><span class="line">6. 伪类 + `transform`方案</span><br></pre></td></tr></table></figure></p>
+<p>.border_1px:before{<br>          content: ‘’;<br>          position: absolute;<br>          top: 0;<br>          height: 1px;<br>          width: 100%;<br>          background-color: #000;<br>          transform-origin: 50% 0%;<br>        }<br>        @media only screen and (-webkit-min-device-pixel-ratio:2){<br>            .border_1px:before{<br>                transform: scaleY(0.5);<br>            }<br>        }<br>        @media only screen and (-webkit-min-device-pixel-ratio:3){<br>            .border_1px:before{<br>                transform: scaleY(0.33);<br>            }<br>        }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这种方式可以满足各种场景，如果需要满足圆角，只需要给伪类也加上border-radius即可  </span><br><span class="line"></span><br><span class="line">7. svg  </span><br><span class="line">&gt; 上面我们`border-image`和`background-image`都可以模拟`1px`边框，但是使用的都是位图，还需要外部引入。</span><br><span class="line">借助`PostCSS`的`postcss-write-svg`我们能直接使用`border-image`和`background-image`创建svg的`1px`边框：</span><br></pre></td></tr></table></figure></p>
+<p>@svg border_1px {<br>  height: 2px;<br>  @rect {<br>    fill: var(–color, black);<br>    width: 100%;<br>    height: 50%;<br>    }<br>  }<br>.example { border: 1px solid transparent; border-image: svg(border_1px param(–color #00b1ff)) 2 2 stretch; }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">编译后：</span><br></pre></td></tr></table></figure></p>
+<p>.example { border: 1px solid transparent; border-image: url(“data:image/svg+xml;charset=utf-8,%3Csvg xmlns=’<a href="http://www.w3.org/2000/svg&#39;" target="_blank" rel="noopener">http://www.w3.org/2000/svg&#39;</a> height=’2px’%3E%3Crect fill=’%2300b1ff’ width=’100%25’ height=’50%25’/%3E%3C/svg%3E”) 2 2 stretch; }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 6.2 图片模糊问题 </span><br><span class="line"></span><br><span class="line">##### 6.2.1 产生原因</span><br><span class="line"></span><br><span class="line">我们平时使用的图片大多数都属于位图（png、jpg...），位图由一个个像素点构成的，每个像素都具有特定的位置和颜色值：  </span><br><span class="line"></span><br><span class="line">![](https://user-gold-cdn.xitu.io/2019/5/17/16ac3a67149783ae?imageslim) </span><br><span class="line"></span><br><span class="line">理论上，位图的每个像素对应在屏幕上使用一个物理像素来渲染，才能达到最佳的显示效果。  </span><br><span class="line"></span><br><span class="line">而在`dpr &gt; 1`的屏幕上，位图的一个像素可能由多个物理像素来渲染，然而这些物理像素点并不能被准确的分配上对应位图像素的颜色，只能取近似值，所以相同的图片在`dpr &gt; 1`的屏幕上就会模糊:  </span><br><span class="line"></span><br><span class="line">![](https://user-gold-cdn.xitu.io/2019/5/17/16ac3a67167287de?imageslim)</span><br><span class="line"></span><br><span class="line">##### 6.2.2 解决方案</span><br><span class="line">为了保证图片质量，我们应该尽可能让一个屏幕像素来渲染一个图片像素，所以，针对不同DPR的屏幕，我们需要展示不同分辨率的图片。</span><br><span class="line"></span><br><span class="line">如：在`dpr=2`的屏幕上展示两倍图`(@2x)`，在`dpr=3`的屏幕上展示三倍图`(@3x)`。</span><br><span class="line"></span><br><span class="line">![](https://user-gold-cdn.xitu.io/2019/5/17/16ac3a675038a23c?imageslim)</span><br><span class="line"></span><br><span class="line">1. media查询</span><br></pre></td></tr></table></figure></p>
+<p>.avatar{<br>            background-image: url(conardLi_1x.png);<br>        }<br>        @media only screen and (-webkit-min-device-pixel-ratio:2){<br>            .avatar{<br>                background-image: url(conardLi_2x.png);<br>            }<br>        }<br>        @media only screen and (-webkit-min-device-pixel-ratio:3){<br>            .avatar{<br>                background-image: url(conardLi_3x.png);<br>            }<br>        }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 只适用于背景图  </span><br><span class="line"></span><br><span class="line">2. image-set</span><br></pre></td></tr></table></figure></p>
+<p>.avatar {<br>    background-image: -webkit-image-set( “conardLi_1x.png” 1x, “conardLi_2x.png” 2x );<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 只适用于背景图  </span><br><span class="line"></span><br><span class="line">3. srcset</span><br><span class="line">使用img标签的srcset属性，浏览器会自动根据像素密度匹配最佳显示图片：</span><br></pre></td></tr></table></figure></p>
+<p><img src="conardLi_1x.png" srcset=" conardLi_2x.png 2x, conardLi_3x.png 3x"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4. 使用svg  </span><br><span class="line">`SVG的`全称是可缩放矢量图（`Scalable Vector Graphics`）。不同于位图的基于像素，`SVG` 则是属于对图像的形状描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。</span><br></pre></td></tr></table></figure></p>
+<p><img src="conardLi.svg"></p>
+<p><img src="data:image/svg+xml;base64,[data]"></p>
+<p>.avatar {<br>  background: url(conardLi.svg);<br>}<br><code>`</code></p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="https://juejin.im/post/5cddf289f265da038f77696c#heading-37" target="_blank" rel="noopener">https://juejin.im/post/5cddf289f265da038f77696c#heading-37</a>  </li>
+<li><a href="https://www.quirksmode.org/mobile/metaviewport/" target="_blank" rel="noopener">https://www.quirksmode.org/mobile/metaviewport/</a></li>
+<li><a href="https://www.quirksmode.org/mobile/viewports.html" target="_blank" rel="noopener">https://www.quirksmode.org/mobile/viewports.html</a></li>
+<li><a href="https://www.quirksmode.org/mobile/viewports2.html" target="_blank" rel="noopener">https://www.quirksmode.org/mobile/viewports2.html</a></li>
+<li><a href="https://www.cnblogs.com/zaoa/p/8630393.html" target="_blank" rel="noopener">https://www.cnblogs.com/zaoa/p/8630393.html</a></li>
+<li><a href="https://www.jianshu.com/p/31f8907637a6" target="_blank" rel="noopener">https://www.jianshu.com/p/31f8907637a6</a></li>
+<li><a href="https://www.jianshu.com/p/297da675e123" target="_blank" rel="noopener">https://www.jianshu.com/p/297da675e123</a></li>
+<li><a href="https://blog.csdn.net/hjc256/article/details/83097907" target="_blank" rel="noopener">https://blog.csdn.net/hjc256/article/details/83097907</a></li>
+<li><a href="https://www.cnblogs.com/webxu20180730/p/9562543.html" target="_blank" rel="noopener">https://www.cnblogs.com/webxu20180730/p/9562543.html</a></li>
+<li><a href="https://www.jianshu.com/p/7c5fdf90c0ef" target="_blank" rel="noopener">https://www.jianshu.com/p/7c5fdf90c0ef</a></li>
+</ul>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/09/22/overwrite/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/plogo.jpg" alt="YoungSure's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        1848423407@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=s8rcxt3UwMbB1oPzwsKd0Nze" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">3</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">21</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+    <a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.help
+        <span class="mdl-button__ripple-container">
+          <span class="mdl-ripple"></span>
+        </span>
+      </div>
+    </a>
+
+-->
+
+<!-- Feedback -->
+<!--
+
+    <a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.feedback
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="https://www.weibo.com/u/1820223610/home?wvr=5&amp;lf=reg" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/RationalPoet" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>RationalPoet Blog --Mac
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?tNQK2Tw2SUL8a1Scn/Mgew==", true)</script>
+    
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?5+2z7ZZmFuZK5IcimlZbxw==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',false);
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
